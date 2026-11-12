@@ -1,0 +1,5 @@
+cd src && make
+make[1]: Entering directory '/home/duongldm/omnet-ws/stp/src'
+StpBridge.cc
+Creating executable: ../out/gcc-debug/src/stp_dbg
+make[1]: Leaving directory '/home/duongldm/omnet-ws/stp/src'

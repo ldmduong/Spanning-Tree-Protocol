@@ -1,0 +1,3 @@
+package stp;
+
+@license(LGPL);

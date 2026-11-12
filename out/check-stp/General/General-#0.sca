@@ -1,0 +1,100 @@
+version 3
+run General-0-20261111-14:03:49-18023
+attr configname General
+attr datetime 20261111-14:03:49
+attr datetimef 20261111-140349
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network stp.StpNet
+attr processid 18023
+attr repetition 0
+attr replication #0
+attr resultdir ../out/check-stp/General
+attr runnumber 0
+attr seedset 0
+config cmdenv-express-mode false
+config result-dir ../out/check-stp/General
+config network stp.StpNet
+config sim-time-limit 10s
+
+par StpNet.b0.ethg$o[0].channel typename "\"stp.StpLink\""
+par StpNet.b0.ethg$o[0].channel disabled false
+attr mutable ""
+par StpNet.b0.ethg$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par StpNet.b0.ethg$o[0].channel pathCost 1
+par StpNet.b0.ethg$o[0].channel failAt -1s
+attr unit s
+par StpNet.b1.ethg$o[0].channel typename "\"stp.StpLink\""
+par StpNet.b1.ethg$o[0].channel disabled false
+attr mutable ""
+par StpNet.b1.ethg$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par StpNet.b1.ethg$o[0].channel pathCost 1
+par StpNet.b1.ethg$o[0].channel failAt -1s
+attr unit s
+par StpNet.b1.ethg$o[1].channel typename "\"stp.StpLink\""
+par StpNet.b1.ethg$o[1].channel disabled false
+attr mutable ""
+par StpNet.b1.ethg$o[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par StpNet.b1.ethg$o[1].channel pathCost 1
+par StpNet.b1.ethg$o[1].channel failAt -1s
+attr unit s
+par StpNet.b2.ethg$o[0].channel typename "\"stp.StpLink\""
+par StpNet.b2.ethg$o[0].channel disabled false
+attr mutable ""
+par StpNet.b2.ethg$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par StpNet.b2.ethg$o[0].channel pathCost 1
+par StpNet.b2.ethg$o[0].channel failAt -1s
+attr unit s
+par StpNet.b2.ethg$o[1].channel typename "\"stp.StpLink\""
+par StpNet.b2.ethg$o[1].channel disabled false
+attr mutable ""
+par StpNet.b2.ethg$o[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par StpNet.b2.ethg$o[1].channel pathCost 1
+par StpNet.b2.ethg$o[1].channel failAt -1s
+attr unit s
+par StpNet.b0.ethg$o[1].channel typename "\"stp.StpLink\""
+par StpNet.b0.ethg$o[1].channel disabled false
+attr mutable ""
+par StpNet.b0.ethg$o[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par StpNet.b0.ethg$o[1].channel pathCost 1
+par StpNet.b0.ethg$o[1].channel failAt -1s
+attr unit s
+par StpNet.b0 typename "\"stp.StpBridge\""
+par StpNet.b0 bridgeId 0
+par StpNet.b0 priority 32768
+par StpNet.b0 helloTime 2s
+attr unit s
+par StpNet.b0 maxAge 20s
+attr unit s
+par StpNet.b1 typename "\"stp.StpBridge\""
+par StpNet.b1 bridgeId 1
+par StpNet.b1 priority 32768
+par StpNet.b1 helloTime 2s
+attr unit s
+par StpNet.b1 maxAge 20s
+attr unit s
+par StpNet.b2 typename "\"stp.StpBridge\""
+par StpNet.b2 bridgeId 2
+par StpNet.b2 priority 32768
+par StpNet.b2 helloTime 2s
+attr unit s
+par StpNet.b2 maxAge 20s
+attr unit s
+par StpNet typename "\"stp.StpNet\""
+

@@ -1,0 +1,22 @@
+K1: root=b0, forwarding/blocking/down=10/2/0, tree=b0-b1 b1-b2 b3-b4 b4-b0, last change=4.01s, convergence=4.01s, stable=20.99s
+K2: root=b3, forwarding/blocking/down=10/2/0, tree=b1-b2 b2-b3 b3-b4 b4-b0, last change=4.01s, convergence=4.01s, stable=20.99s
+K3 before: root=b0, forwarding/blocking/down=10/2/0, tree=b0-b1 b1-b2 b3-b4 b4-b0, last change=4.01s, convergence=4.01s, stable=6.49s
+K3 after: root=b0, forwarding/blocking/down=9/1/2, tree=b1-b2 b3-b4 b4-b0 b1-b4, last change=14.01s, convergence=3.51s, stable=10.99s
+K4: root=b0, forwarding/blocking/down=10/2/0, tree=b1-b2 b3-b4 b4-b0 b1-b4, last change=4.01s, convergence=4.01s, stable=20.99s
+K5: root=b0, forwarding/blocking/down=9/1/0, tree=b0-b1 b1-b2 b3-b4 b4-b0, last change=4.01s, convergence=4.01s, stable=20.99s
+K6: root=b0, forwarding/blocking/down=17/3/0, tree=b0-b1 b1-b2 b3-b4 b4-b0 b4-b5 b5-b6 b7-b4, last change=4.01s, convergence=4.01s, stable=20.99s
+K7_STP before: root=b0, forwarding/blocking/down=9/1/2, tree=b0-b1 b1-b2 b2-b3 b1-b4, last change=4.01s, convergence=4.01s, stable=7.99s
+K7_STP after: root=b0, forwarding/blocking/down=10/2/0, tree=b0-b1 b1-b2 b3-b4 b4-b0, last change=14.01s, convergence=2.01s, stable=10.99s
+K7_STP restored link forwarding at 12.01s
+K7_STP probes before: 800/800
+K7_STP probes restore round: 19/20
+K7_STP probes during reconvergence: 400/400
+K7_STP probes after convergence: 1780/1780
+K7_STP probes total: 2999/3000, drops={'blocked': 3026, 'duplicate': 2}
+K7_RSTP before: root=b0, forwarding/blocking/down=9/1/2, tree=b0-b1 b1-b2 b2-b3 b1-b4, last change=0.03s, convergence=0.03s, stable=11.97s
+K7_RSTP after: root=b0, forwarding/blocking/down=10/2/0, tree=b0-b1 b1-b2 b3-b4 b4-b0, last change=12.02s, convergence=0.02s, stable=12.98s
+K7_RSTP restored link forwarding at 12.01s
+K7_RSTP probes before: 800/800
+K7_RSTP probes restore round: 17/20
+K7_RSTP probes after convergence: 2180/2180
+K7_RSTP probes total: 2997/3000, drops={'blocked': 3010, 'duplicate': 3}

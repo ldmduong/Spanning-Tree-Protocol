@@ -1,0 +1,676 @@
+OMNeT++ Discrete Event Simulation  (C) 1992-2026 Andras Varga, OpenSim Ltd.
+Version: 6.5.0, build: 261029-ccd51e11a4, edition: Academic Public License -- NOT FOR COMMERCIAL USE
+See the license for distribution terms and warranty disclaimer
+
+Setting up Cmdenv...
+
+Loading NED files from .:  1
+Loading NED files from ../src:  2
+
+Preparing for running configuration K3, run #0...
+Assigned runID=K3-0-20261111-14:33:03-28217
+Setting up network "stp.StpFive"...
+Initializing...
+Initializing channel StpFive.b0.ethg$o[0].link01, stage 0
+Initializing channel StpFive.b1.ethg$o[0].link01, stage 0
+Initializing channel StpFive.b1.ethg$o[1].channel, stage 0
+Initializing channel StpFive.b2.ethg$o[0].channel, stage 0
+Initializing channel StpFive.b2.ethg$o[1].channel, stage 0
+Initializing channel StpFive.b3.ethg$o[0].channel, stage 0
+Initializing channel StpFive.b3.ethg$o[1].channel, stage 0
+Initializing channel StpFive.b4.ethg$o[0].channel, stage 0
+Initializing channel StpFive.b4.ethg$o[1].link04, stage 0
+Initializing channel StpFive.b0.ethg$o[1].link04, stage 0
+Initializing channel StpFive.b1.ethg$o[2].channel, stage 0
+Initializing channel StpFive.b4.ethg$o[2].channel, stage 0
+Initializing module StpFive, stage 0
+Initializing module StpFive.b0, stage 0
+[INFO]	STP_STATE t=0 bridge=b0 root=0 priority=32768 cost=0 rootPort=-1 port=0:b1:designated:forwarding port=1:b4:designated:forwarding
+Initializing module StpFive.b1, stage 0
+[INFO]	STP_STATE t=0 bridge=b1 root=1 priority=32768 cost=0 rootPort=-1 port=0:b0:designated:forwarding port=1:b2:designated:forwarding port=2:b4:designated:forwarding
+Initializing module StpFive.b2, stage 0
+[INFO]	STP_STATE t=0 bridge=b2 root=2 priority=32768 cost=0 rootPort=-1 port=0:b1:designated:forwarding port=1:b3:designated:forwarding
+Initializing module StpFive.b3, stage 0
+[INFO]	STP_STATE t=0 bridge=b3 root=3 priority=32768 cost=0 rootPort=-1 port=0:b2:designated:forwarding port=1:b4:designated:forwarding
+Initializing module StpFive.b4, stage 0
+[INFO]	STP_STATE t=0 bridge=b4 root=4 priority=32768 cost=0 rootPort=-1 port=0:b3:designated:forwarding port=1:b0:designated:forwarding port=2:b1:designated:forwarding
+
+Running simulation...
+** Event #1  t=0  on hello (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    0% completed  (0% total)
+** Event #2  t=0  on hello (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    0% completed  (0% total)
+** Event #3  t=0  on hello (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    0% completed  (0% total)
+** Event #4  t=0  on hello (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    0% completed  (0% total)
+** Event #5  t=0  on hello (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    0% completed  (0% total)
+** Event #6  t=0.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    0% completed  (0% total)
+[DETAIL]	STP_BPDU t=0.01 bridge=b1 port=0 root=0 priority=32768 cost=0 sender=0 senderPriority=32768 senderPort=0 expires=20
+[INFO]	STP_STATE t=0.01 bridge=b1 root=0 priority=32768 cost=1 rootPort=0 port=0:b0:root:forwarding port=1:b2:designated:forwarding port=2:b4:designated:forwarding
+** Event #7  t=0.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    0% completed  (0% total)
+[DETAIL]	STP_BPDU t=0.01 bridge=b4 port=1 root=0 priority=32768 cost=0 sender=0 senderPriority=32768 senderPort=1 expires=20
+[INFO]	STP_STATE t=0.01 bridge=b4 root=0 priority=32768 cost=1 rootPort=1 port=0:b3:designated:forwarding port=1:b0:root:forwarding port=2:b1:designated:forwarding
+** Event #8  t=0.01  on BPDU (Bpdu)  in StpFive.b0 (StpBridge, id=2)    0% completed  (0% total)
+[DETAIL]	STP_BPDU t=0.01 bridge=b0 port=0 root=1 priority=32768 cost=0 sender=1 senderPriority=32768 senderPort=0 expires=20
+** Event #9  t=0.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    0% completed  (0% total)
+[DETAIL]	STP_BPDU t=0.01 bridge=b2 port=0 root=1 priority=32768 cost=0 sender=1 senderPriority=32768 senderPort=1 expires=20
+[INFO]	STP_STATE t=0.01 bridge=b2 root=1 priority=32768 cost=1 rootPort=0 port=0:b1:root:forwarding port=1:b3:designated:forwarding
+** Event #10  t=0.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    0% completed  (0% total)
+[DETAIL]	STP_BPDU t=0.01 bridge=b4 port=2 root=1 priority=32768 cost=0 sender=1 senderPriority=32768 senderPort=2 expires=20
+** Event #11  t=0.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    0% completed  (0% total)
+[DETAIL]	STP_BPDU t=0.01 bridge=b1 port=1 root=2 priority=32768 cost=0 sender=2 senderPriority=32768 senderPort=0 expires=20
+** Event #12  t=0.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    0% completed  (0% total)
+[DETAIL]	STP_BPDU t=0.01 bridge=b3 port=0 root=2 priority=32768 cost=0 sender=2 senderPriority=32768 senderPort=1 expires=20
+[INFO]	STP_STATE t=0.01 bridge=b3 root=2 priority=32768 cost=1 rootPort=0 port=0:b2:root:forwarding port=1:b4:designated:forwarding
+** Event #13  t=0.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    0% completed  (0% total)
+[DETAIL]	STP_BPDU t=0.01 bridge=b2 port=1 root=3 priority=32768 cost=0 sender=3 senderPriority=32768 senderPort=0 expires=20
+** Event #14  t=0.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    0% completed  (0% total)
+[DETAIL]	STP_BPDU t=0.01 bridge=b4 port=0 root=3 priority=32768 cost=0 sender=3 senderPriority=32768 senderPort=1 expires=20
+** Event #15  t=0.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    0% completed  (0% total)
+[DETAIL]	STP_BPDU t=0.01 bridge=b3 port=1 root=4 priority=32768 cost=0 sender=4 senderPriority=32768 senderPort=0 expires=20
+** Event #16  t=0.01  on BPDU (Bpdu)  in StpFive.b0 (StpBridge, id=2)    0% completed  (0% total)
+[DETAIL]	STP_BPDU t=0.01 bridge=b0 port=1 root=4 priority=32768 cost=0 sender=4 senderPriority=32768 senderPort=1 expires=20
+** Event #17  t=0.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    0% completed  (0% total)
+[DETAIL]	STP_BPDU t=0.01 bridge=b1 port=2 root=4 priority=32768 cost=0 sender=4 senderPriority=32768 senderPort=2 expires=20
+** Event #18  t=2  on hello (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    4% completed  (4% total)
+** Event #19  t=2  on hello (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    4% completed  (4% total)
+** Event #20  t=2  on hello (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    4% completed  (4% total)
+** Event #21  t=2  on hello (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    4% completed  (4% total)
+** Event #22  t=2  on hello (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    4% completed  (4% total)
+** Event #23  t=2.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    4% completed  (4% total)
+[DETAIL]	STP_BPDU t=2.01 bridge=b1 port=0 root=0 priority=32768 cost=0 sender=0 senderPriority=32768 senderPort=0 expires=22
+** Event #24  t=2.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    4% completed  (4% total)
+[DETAIL]	STP_BPDU t=2.01 bridge=b4 port=1 root=0 priority=32768 cost=0 sender=0 senderPriority=32768 senderPort=1 expires=22
+** Event #25  t=2.01  on BPDU (Bpdu)  in StpFive.b0 (StpBridge, id=2)    4% completed  (4% total)
+[DETAIL]	STP_BPDU t=2.01 bridge=b0 port=0 root=0 priority=32768 cost=1 sender=1 senderPriority=32768 senderPort=0 expires=20
+** Event #26  t=2.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    4% completed  (4% total)
+[DETAIL]	STP_BPDU t=2.01 bridge=b2 port=0 root=0 priority=32768 cost=1 sender=1 senderPriority=32768 senderPort=1 expires=20
+[INFO]	STP_STATE t=2.01 bridge=b2 root=0 priority=32768 cost=2 rootPort=0 port=0:b1:root:forwarding port=1:b3:designated:forwarding
+** Event #27  t=2.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    4% completed  (4% total)
+[DETAIL]	STP_BPDU t=2.01 bridge=b4 port=2 root=0 priority=32768 cost=1 sender=1 senderPriority=32768 senderPort=2 expires=20
+[INFO]	STP_STATE t=2.01 bridge=b4 root=0 priority=32768 cost=1 rootPort=1 port=0:b3:designated:forwarding port=1:b0:root:forwarding port=2:b1:alternate:blocking
+** Event #28  t=2.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    4% completed  (4% total)
+[DETAIL]	STP_BPDU t=2.01 bridge=b1 port=1 root=1 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=0 expires=20
+** Event #29  t=2.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    4% completed  (4% total)
+[DETAIL]	STP_BPDU t=2.01 bridge=b3 port=0 root=1 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=1 expires=20
+[INFO]	STP_STATE t=2.01 bridge=b3 root=1 priority=32768 cost=2 rootPort=0 port=0:b2:root:forwarding port=1:b4:designated:forwarding
+** Event #30  t=2.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    4% completed  (4% total)
+[DETAIL]	STP_BPDU t=2.01 bridge=b2 port=1 root=2 priority=32768 cost=1 sender=3 senderPriority=32768 senderPort=0 expires=20
+** Event #31  t=2.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    4% completed  (4% total)
+[DETAIL]	STP_BPDU t=2.01 bridge=b4 port=0 root=2 priority=32768 cost=1 sender=3 senderPriority=32768 senderPort=1 expires=20
+** Event #32  t=2.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    4% completed  (4% total)
+[DETAIL]	STP_BPDU t=2.01 bridge=b3 port=1 root=0 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=0 expires=20
+[INFO]	STP_STATE t=2.01 bridge=b3 root=0 priority=32768 cost=2 rootPort=1 port=0:b2:designated:forwarding port=1:b4:root:forwarding
+** Event #33  t=2.01  on BPDU (Bpdu)  in StpFive.b0 (StpBridge, id=2)    4% completed  (4% total)
+[DETAIL]	STP_BPDU t=2.01 bridge=b0 port=1 root=0 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=1 expires=20
+** Event #34  t=2.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    4% completed  (4% total)
+[DETAIL]	STP_BPDU t=2.01 bridge=b1 port=2 root=0 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=2 expires=20
+** Event #35  t=4  on hello (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    8% completed  (8% total)
+** Event #36  t=4  on hello (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    8% completed  (8% total)
+** Event #37  t=4  on hello (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    8% completed  (8% total)
+** Event #38  t=4  on hello (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    8% completed  (8% total)
+** Event #39  t=4  on hello (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    8% completed  (8% total)
+** Event #40  t=4.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    8% completed  (8% total)
+[DETAIL]	STP_BPDU t=4.01 bridge=b1 port=0 root=0 priority=32768 cost=0 sender=0 senderPriority=32768 senderPort=0 expires=24
+** Event #41  t=4.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    8% completed  (8% total)
+[DETAIL]	STP_BPDU t=4.01 bridge=b4 port=1 root=0 priority=32768 cost=0 sender=0 senderPriority=32768 senderPort=1 expires=24
+** Event #42  t=4.01  on BPDU (Bpdu)  in StpFive.b0 (StpBridge, id=2)    8% completed  (8% total)
+[DETAIL]	STP_BPDU t=4.01 bridge=b0 port=0 root=0 priority=32768 cost=1 sender=1 senderPriority=32768 senderPort=0 expires=22
+** Event #43  t=4.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    8% completed  (8% total)
+[DETAIL]	STP_BPDU t=4.01 bridge=b2 port=0 root=0 priority=32768 cost=1 sender=1 senderPriority=32768 senderPort=1 expires=22
+** Event #44  t=4.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    8% completed  (8% total)
+[DETAIL]	STP_BPDU t=4.01 bridge=b4 port=2 root=0 priority=32768 cost=1 sender=1 senderPriority=32768 senderPort=2 expires=22
+** Event #45  t=4.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    8% completed  (8% total)
+[DETAIL]	STP_BPDU t=4.01 bridge=b1 port=1 root=0 priority=32768 cost=2 sender=2 senderPriority=32768 senderPort=0 expires=20
+** Event #46  t=4.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    8% completed  (8% total)
+[DETAIL]	STP_BPDU t=4.01 bridge=b3 port=0 root=0 priority=32768 cost=2 sender=2 senderPriority=32768 senderPort=1 expires=20
+[INFO]	STP_STATE t=4.01 bridge=b3 root=0 priority=32768 cost=2 rootPort=1 port=0:b2:alternate:blocking port=1:b4:root:forwarding
+** Event #47  t=4.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    8% completed  (8% total)
+[DETAIL]	STP_BPDU t=4.01 bridge=b2 port=1 root=0 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=0 expires=20
+** Event #48  t=4.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    8% completed  (8% total)
+[DETAIL]	STP_BPDU t=4.01 bridge=b4 port=0 root=0 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=1 expires=20
+** Event #49  t=4.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    8% completed  (8% total)
+[DETAIL]	STP_BPDU t=4.01 bridge=b3 port=1 root=0 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=0 expires=22
+** Event #50  t=4.01  on BPDU (Bpdu)  in StpFive.b0 (StpBridge, id=2)    8% completed  (8% total)
+[DETAIL]	STP_BPDU t=4.01 bridge=b0 port=1 root=0 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=1 expires=22
+** Event #51  t=4.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    8% completed  (8% total)
+[DETAIL]	STP_BPDU t=4.01 bridge=b1 port=2 root=0 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=2 expires=22
+** Event #52  t=6  on hello (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    13% completed  (13% total)
+** Event #53  t=6  on hello (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    13% completed  (13% total)
+** Event #54  t=6  on hello (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    13% completed  (13% total)
+** Event #55  t=6  on hello (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    13% completed  (13% total)
+** Event #56  t=6  on hello (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    13% completed  (13% total)
+** Event #57  t=6.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    13% completed  (13% total)
+[DETAIL]	STP_BPDU t=6.01 bridge=b1 port=0 root=0 priority=32768 cost=0 sender=0 senderPriority=32768 senderPort=0 expires=26
+** Event #58  t=6.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    13% completed  (13% total)
+[DETAIL]	STP_BPDU t=6.01 bridge=b4 port=1 root=0 priority=32768 cost=0 sender=0 senderPriority=32768 senderPort=1 expires=26
+** Event #59  t=6.01  on BPDU (Bpdu)  in StpFive.b0 (StpBridge, id=2)    13% completed  (13% total)
+[DETAIL]	STP_BPDU t=6.01 bridge=b0 port=0 root=0 priority=32768 cost=1 sender=1 senderPriority=32768 senderPort=0 expires=24
+** Event #60  t=6.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    13% completed  (13% total)
+[DETAIL]	STP_BPDU t=6.01 bridge=b2 port=0 root=0 priority=32768 cost=1 sender=1 senderPriority=32768 senderPort=1 expires=24
+** Event #61  t=6.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    13% completed  (13% total)
+[DETAIL]	STP_BPDU t=6.01 bridge=b4 port=2 root=0 priority=32768 cost=1 sender=1 senderPriority=32768 senderPort=2 expires=24
+** Event #62  t=6.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    13% completed  (13% total)
+[DETAIL]	STP_BPDU t=6.01 bridge=b1 port=1 root=0 priority=32768 cost=2 sender=2 senderPriority=32768 senderPort=0 expires=22
+** Event #63  t=6.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    13% completed  (13% total)
+[DETAIL]	STP_BPDU t=6.01 bridge=b3 port=0 root=0 priority=32768 cost=2 sender=2 senderPriority=32768 senderPort=1 expires=22
+** Event #64  t=6.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    13% completed  (13% total)
+[DETAIL]	STP_BPDU t=6.01 bridge=b2 port=1 root=0 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=0 expires=22
+** Event #65  t=6.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    13% completed  (13% total)
+[DETAIL]	STP_BPDU t=6.01 bridge=b4 port=0 root=0 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=1 expires=22
+** Event #66  t=6.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    13% completed  (13% total)
+[DETAIL]	STP_BPDU t=6.01 bridge=b3 port=1 root=0 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=0 expires=24
+** Event #67  t=6.01  on BPDU (Bpdu)  in StpFive.b0 (StpBridge, id=2)    13% completed  (13% total)
+[DETAIL]	STP_BPDU t=6.01 bridge=b0 port=1 root=0 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=1 expires=24
+** Event #68  t=6.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    13% completed  (13% total)
+[DETAIL]	STP_BPDU t=6.01 bridge=b1 port=2 root=0 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=2 expires=24
+** Event #69  t=8  on hello (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    17% completed  (17% total)
+** Event #70  t=8  on hello (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    17% completed  (17% total)
+** Event #71  t=8  on hello (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    17% completed  (17% total)
+** Event #72  t=8  on hello (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    17% completed  (17% total)
+** Event #73  t=8  on hello (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    17% completed  (17% total)
+** Event #74  t=8.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    17% completed  (17% total)
+[DETAIL]	STP_BPDU t=8.01 bridge=b1 port=0 root=0 priority=32768 cost=0 sender=0 senderPriority=32768 senderPort=0 expires=28
+** Event #75  t=8.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    17% completed  (17% total)
+[DETAIL]	STP_BPDU t=8.01 bridge=b4 port=1 root=0 priority=32768 cost=0 sender=0 senderPriority=32768 senderPort=1 expires=28
+** Event #76  t=8.01  on BPDU (Bpdu)  in StpFive.b0 (StpBridge, id=2)    17% completed  (17% total)
+[DETAIL]	STP_BPDU t=8.01 bridge=b0 port=0 root=0 priority=32768 cost=1 sender=1 senderPriority=32768 senderPort=0 expires=26
+** Event #77  t=8.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    17% completed  (17% total)
+[DETAIL]	STP_BPDU t=8.01 bridge=b2 port=0 root=0 priority=32768 cost=1 sender=1 senderPriority=32768 senderPort=1 expires=26
+** Event #78  t=8.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    17% completed  (17% total)
+[DETAIL]	STP_BPDU t=8.01 bridge=b4 port=2 root=0 priority=32768 cost=1 sender=1 senderPriority=32768 senderPort=2 expires=26
+** Event #79  t=8.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    17% completed  (17% total)
+[DETAIL]	STP_BPDU t=8.01 bridge=b1 port=1 root=0 priority=32768 cost=2 sender=2 senderPriority=32768 senderPort=0 expires=24
+** Event #80  t=8.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    17% completed  (17% total)
+[DETAIL]	STP_BPDU t=8.01 bridge=b3 port=0 root=0 priority=32768 cost=2 sender=2 senderPriority=32768 senderPort=1 expires=24
+** Event #81  t=8.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    17% completed  (17% total)
+[DETAIL]	STP_BPDU t=8.01 bridge=b2 port=1 root=0 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=0 expires=24
+** Event #82  t=8.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    17% completed  (17% total)
+[DETAIL]	STP_BPDU t=8.01 bridge=b4 port=0 root=0 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=1 expires=24
+** Event #83  t=8.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    17% completed  (17% total)
+[DETAIL]	STP_BPDU t=8.01 bridge=b3 port=1 root=0 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=0 expires=26
+** Event #84  t=8.01  on BPDU (Bpdu)  in StpFive.b0 (StpBridge, id=2)    17% completed  (17% total)
+[DETAIL]	STP_BPDU t=8.01 bridge=b0 port=1 root=0 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=1 expires=26
+** Event #85  t=8.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    17% completed  (17% total)
+[DETAIL]	STP_BPDU t=8.01 bridge=b1 port=2 root=0 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=2 expires=26
+** Event #86  t=10  on hello (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    22% completed  (22% total)
+** Event #87  t=10  on hello (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    22% completed  (22% total)
+** Event #88  t=10  on hello (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    22% completed  (22% total)
+** Event #89  t=10  on hello (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    22% completed  (22% total)
+** Event #90  t=10  on hello (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    22% completed  (22% total)
+** Event #91  t=10.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    22% completed  (22% total)
+[DETAIL]	STP_BPDU t=10.01 bridge=b1 port=0 root=0 priority=32768 cost=0 sender=0 senderPriority=32768 senderPort=0 expires=30
+** Event #92  t=10.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    22% completed  (22% total)
+[DETAIL]	STP_BPDU t=10.01 bridge=b4 port=1 root=0 priority=32768 cost=0 sender=0 senderPriority=32768 senderPort=1 expires=30
+** Event #93  t=10.01  on BPDU (Bpdu)  in StpFive.b0 (StpBridge, id=2)    22% completed  (22% total)
+[DETAIL]	STP_BPDU t=10.01 bridge=b0 port=0 root=0 priority=32768 cost=1 sender=1 senderPriority=32768 senderPort=0 expires=28
+** Event #94  t=10.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    22% completed  (22% total)
+[DETAIL]	STP_BPDU t=10.01 bridge=b2 port=0 root=0 priority=32768 cost=1 sender=1 senderPriority=32768 senderPort=1 expires=28
+** Event #95  t=10.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    22% completed  (22% total)
+[DETAIL]	STP_BPDU t=10.01 bridge=b4 port=2 root=0 priority=32768 cost=1 sender=1 senderPriority=32768 senderPort=2 expires=28
+** Event #96  t=10.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    22% completed  (22% total)
+[DETAIL]	STP_BPDU t=10.01 bridge=b1 port=1 root=0 priority=32768 cost=2 sender=2 senderPriority=32768 senderPort=0 expires=26
+** Event #97  t=10.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    22% completed  (22% total)
+[DETAIL]	STP_BPDU t=10.01 bridge=b3 port=0 root=0 priority=32768 cost=2 sender=2 senderPriority=32768 senderPort=1 expires=26
+** Event #98  t=10.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    22% completed  (22% total)
+[DETAIL]	STP_BPDU t=10.01 bridge=b2 port=1 root=0 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=0 expires=26
+** Event #99  t=10.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    22% completed  (22% total)
+[DETAIL]	STP_BPDU t=10.01 bridge=b4 port=0 root=0 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=1 expires=26
+** Event #100  t=10.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    22% completed  (22% total)
+[DETAIL]	STP_BPDU t=10.01 bridge=b3 port=1 root=0 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=0 expires=28
+** Event #101  t=10.01  on BPDU (Bpdu)  in StpFive.b0 (StpBridge, id=2)    22% completed  (22% total)
+[DETAIL]	STP_BPDU t=10.01 bridge=b0 port=1 root=0 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=1 expires=28
+** Event #102  t=10.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    22% completed  (22% total)
+[DETAIL]	STP_BPDU t=10.01 bridge=b1 port=2 root=0 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=2 expires=28
+** Event #103  t=10.5  on portChange (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    23% completed  (23% total)
+[INFO]	STP_LINK_DOWN t=10.5 bridge=b4 peer=b0 port=1
+[INFO]	STP_STATE t=10.5 bridge=b4 root=0 priority=32768 cost=2 rootPort=2 port=0:b3:alternate:blocking port=1:b0:disabled:down port=2:b1:root:forwarding
+** Event #104  t=10.5  on portChange (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    23% completed  (23% total)
+[INFO]	STP_LINK_DOWN t=10.5 bridge=b0 peer=b1 port=0
+[INFO]	STP_LINK_DOWN t=10.5 bridge=b0 peer=b4 port=1
+[INFO]	STP_STATE t=10.5 bridge=b0 root=0 priority=32768 cost=0 rootPort=-1 port=0:b1:disabled:down port=1:b4:disabled:down
+** Event #105  t=10.5  on portChange (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    23% completed  (23% total)
+[INFO]	STP_LINK_DOWN t=10.5 bridge=b1 peer=b0 port=0
+[INFO]	STP_STATE t=10.5 bridge=b1 root=0 priority=32768 cost=2 rootPort=2 port=0:b0:disabled:down port=1:b2:designated:forwarding port=2:b4:root:forwarding
+** Event #106  t=12  on hello (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    26% completed  (26% total)
+** Event #107  t=12  on hello (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    26% completed  (26% total)
+** Event #108  t=12  on hello (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    26% completed  (26% total)
+** Event #109  t=12  on hello (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    26% completed  (26% total)
+** Event #110  t=12  on hello (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    26% completed  (26% total)
+** Event #111  t=12.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    26% completed  (26% total)
+[DETAIL]	STP_BPDU t=12.01 bridge=b2 port=0 root=0 priority=32768 cost=2 sender=1 senderPriority=32768 senderPort=1 expires=28
+[INFO]	STP_STATE t=12.01 bridge=b2 root=0 priority=32768 cost=3 rootPort=0 port=0:b1:root:forwarding port=1:b3:alternate:blocking
+** Event #112  t=12.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    26% completed  (26% total)
+[DETAIL]	STP_BPDU t=12.01 bridge=b4 port=2 root=0 priority=32768 cost=2 sender=1 senderPriority=32768 senderPort=2 expires=28
+[INFO]	STP_STATE t=12.01 bridge=b4 root=0 priority=32768 cost=3 rootPort=2 port=0:b3:alternate:blocking port=1:b0:disabled:down port=2:b1:root:forwarding
+** Event #113  t=12.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    26% completed  (26% total)
+[DETAIL]	STP_BPDU t=12.01 bridge=b1 port=1 root=0 priority=32768 cost=2 sender=2 senderPriority=32768 senderPort=0 expires=28
+** Event #114  t=12.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    26% completed  (26% total)
+[DETAIL]	STP_BPDU t=12.01 bridge=b3 port=0 root=0 priority=32768 cost=2 sender=2 senderPriority=32768 senderPort=1 expires=28
+** Event #115  t=12.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    26% completed  (26% total)
+[DETAIL]	STP_BPDU t=12.01 bridge=b2 port=1 root=0 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=0 expires=28
+** Event #116  t=12.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    26% completed  (26% total)
+[DETAIL]	STP_BPDU t=12.01 bridge=b4 port=0 root=0 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=1 expires=28
+** Event #117  t=12.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    26% completed  (26% total)
+[DETAIL]	STP_BPDU t=12.01 bridge=b3 port=1 root=0 priority=32768 cost=2 sender=4 senderPriority=32768 senderPort=0 expires=28
+[INFO]	STP_STATE t=12.01 bridge=b3 root=0 priority=32768 cost=3 rootPort=0 port=0:b2:root:forwarding port=1:b4:alternate:blocking
+** Event #118  t=12.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    26% completed  (26% total)
+[DETAIL]	STP_BPDU t=12.01 bridge=b1 port=2 root=0 priority=32768 cost=2 sender=4 senderPriority=32768 senderPort=2 expires=28
+[INFO]	STP_STATE t=12.01 bridge=b1 root=0 priority=32768 cost=3 rootPort=1 port=0:b0:disabled:down port=1:b2:root:forwarding port=2:b4:alternate:blocking
+** Event #119  t=14  on hello (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    31% completed  (31% total)
+** Event #120  t=14  on hello (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    31% completed  (31% total)
+** Event #121  t=14  on hello (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    31% completed  (31% total)
+** Event #122  t=14  on hello (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    31% completed  (31% total)
+** Event #123  t=14  on hello (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    31% completed  (31% total)
+** Event #124  t=14.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    31% completed  (31% total)
+[DETAIL]	STP_BPDU t=14.01 bridge=b2 port=0 root=0 priority=32768 cost=3 sender=1 senderPriority=32768 senderPort=1 expires=28
+[INFO]	STP_STATE t=14.01 bridge=b2 root=0 priority=32768 cost=3 rootPort=1 port=0:b1:alternate:blocking port=1:b3:root:forwarding
+** Event #125  t=14.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    31% completed  (31% total)
+[DETAIL]	STP_BPDU t=14.01 bridge=b4 port=2 root=0 priority=32768 cost=3 sender=1 senderPriority=32768 senderPort=2 expires=28
+[INFO]	STP_STATE t=14.01 bridge=b4 root=0 priority=32768 cost=3 rootPort=0 port=0:b3:root:forwarding port=1:b0:disabled:down port=2:b1:alternate:blocking
+** Event #126  t=14.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    31% completed  (31% total)
+[DETAIL]	STP_BPDU t=14.01 bridge=b1 port=1 root=0 priority=32768 cost=3 sender=2 senderPriority=32768 senderPort=0 expires=28
+[INFO]	STP_STATE t=14.01 bridge=b1 root=0 priority=32768 cost=3 rootPort=2 port=0:b0:disabled:down port=1:b2:designated:forwarding port=2:b4:root:forwarding
+** Event #127  t=14.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    31% completed  (31% total)
+[DETAIL]	STP_BPDU t=14.01 bridge=b3 port=0 root=0 priority=32768 cost=3 sender=2 senderPriority=32768 senderPort=1 expires=28
+[INFO]	STP_STATE t=14.01 bridge=b3 root=0 priority=32768 cost=3 rootPort=1 port=0:b2:alternate:blocking port=1:b4:root:forwarding
+** Event #128  t=14.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    31% completed  (31% total)
+[DETAIL]	STP_BPDU t=14.01 bridge=b2 port=1 root=0 priority=32768 cost=3 sender=3 senderPriority=32768 senderPort=0 expires=28
+[INFO]	STP_STATE t=14.01 bridge=b2 root=0 priority=32768 cost=4 rootPort=0 port=0:b1:root:forwarding port=1:b3:alternate:blocking
+** Event #129  t=14.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    31% completed  (31% total)
+[DETAIL]	STP_BPDU t=14.01 bridge=b4 port=0 root=0 priority=32768 cost=3 sender=3 senderPriority=32768 senderPort=1 expires=28
+[INFO]	STP_STATE t=14.01 bridge=b4 root=0 priority=32768 cost=4 rootPort=2 port=0:b3:alternate:blocking port=1:b0:disabled:down port=2:b1:root:forwarding
+** Event #130  t=14.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    31% completed  (31% total)
+[DETAIL]	STP_BPDU t=14.01 bridge=b3 port=1 root=0 priority=32768 cost=3 sender=4 senderPriority=32768 senderPort=0 expires=28
+[INFO]	STP_STATE t=14.01 bridge=b3 root=0 priority=32768 cost=4 rootPort=0 port=0:b2:root:forwarding port=1:b4:alternate:blocking
+** Event #131  t=14.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    31% completed  (31% total)
+[DETAIL]	STP_BPDU t=14.01 bridge=b1 port=2 root=0 priority=32768 cost=3 sender=4 senderPriority=32768 senderPort=2 expires=28
+[INFO]	STP_STATE t=14.01 bridge=b1 root=0 priority=32768 cost=4 rootPort=1 port=0:b0:disabled:down port=1:b2:root:forwarding port=2:b4:alternate:blocking
+** Event #132  t=16  on hello (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    35% completed  (35% total)
+** Event #133  t=16  on hello (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    35% completed  (35% total)
+** Event #134  t=16  on hello (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    35% completed  (35% total)
+** Event #135  t=16  on hello (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    35% completed  (35% total)
+** Event #136  t=16  on hello (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    35% completed  (35% total)
+** Event #137  t=16.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    35% completed  (35% total)
+[DETAIL]	STP_BPDU t=16.01 bridge=b2 port=0 root=0 priority=32768 cost=4 sender=1 senderPriority=32768 senderPort=1 expires=28
+[INFO]	STP_STATE t=16.01 bridge=b2 root=0 priority=32768 cost=4 rootPort=1 port=0:b1:alternate:blocking port=1:b3:root:forwarding
+** Event #138  t=16.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    35% completed  (35% total)
+[DETAIL]	STP_BPDU t=16.01 bridge=b4 port=2 root=0 priority=32768 cost=4 sender=1 senderPriority=32768 senderPort=2 expires=28
+[INFO]	STP_STATE t=16.01 bridge=b4 root=0 priority=32768 cost=4 rootPort=0 port=0:b3:root:forwarding port=1:b0:disabled:down port=2:b1:alternate:blocking
+** Event #139  t=16.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    35% completed  (35% total)
+[DETAIL]	STP_BPDU t=16.01 bridge=b1 port=1 root=0 priority=32768 cost=4 sender=2 senderPriority=32768 senderPort=0 expires=28
+[INFO]	STP_STATE t=16.01 bridge=b1 root=0 priority=32768 cost=4 rootPort=2 port=0:b0:disabled:down port=1:b2:designated:forwarding port=2:b4:root:forwarding
+** Event #140  t=16.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    35% completed  (35% total)
+[DETAIL]	STP_BPDU t=16.01 bridge=b3 port=0 root=0 priority=32768 cost=4 sender=2 senderPriority=32768 senderPort=1 expires=28
+[INFO]	STP_STATE t=16.01 bridge=b3 root=0 priority=32768 cost=4 rootPort=1 port=0:b2:alternate:blocking port=1:b4:root:forwarding
+** Event #141  t=16.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    35% completed  (35% total)
+[DETAIL]	STP_BPDU t=16.01 bridge=b2 port=1 root=0 priority=32768 cost=4 sender=3 senderPriority=32768 senderPort=0 expires=28
+[INFO]	STP_STATE t=16.01 bridge=b2 root=0 priority=32768 cost=5 rootPort=0 port=0:b1:root:forwarding port=1:b3:alternate:blocking
+** Event #142  t=16.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    35% completed  (35% total)
+[DETAIL]	STP_BPDU t=16.01 bridge=b4 port=0 root=0 priority=32768 cost=4 sender=3 senderPriority=32768 senderPort=1 expires=28
+[INFO]	STP_STATE t=16.01 bridge=b4 root=0 priority=32768 cost=5 rootPort=2 port=0:b3:alternate:blocking port=1:b0:disabled:down port=2:b1:root:forwarding
+** Event #143  t=16.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    35% completed  (35% total)
+[DETAIL]	STP_BPDU t=16.01 bridge=b3 port=1 root=0 priority=32768 cost=4 sender=4 senderPriority=32768 senderPort=0 expires=28
+[INFO]	STP_STATE t=16.01 bridge=b3 root=0 priority=32768 cost=5 rootPort=0 port=0:b2:root:forwarding port=1:b4:alternate:blocking
+** Event #144  t=16.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    35% completed  (35% total)
+[DETAIL]	STP_BPDU t=16.01 bridge=b1 port=2 root=0 priority=32768 cost=4 sender=4 senderPriority=32768 senderPort=2 expires=28
+[INFO]	STP_STATE t=16.01 bridge=b1 root=0 priority=32768 cost=5 rootPort=1 port=0:b0:disabled:down port=1:b2:root:forwarding port=2:b4:alternate:blocking
+** Event #145  t=18  on hello (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    40% completed  (39% total)
+** Event #146  t=18  on hello (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    40% completed  (39% total)
+** Event #147  t=18  on hello (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    40% completed  (39% total)
+** Event #148  t=18  on hello (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    40% completed  (39% total)
+** Event #149  t=18  on hello (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    40% completed  (39% total)
+** Event #150  t=18.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    40% completed  (40% total)
+[DETAIL]	STP_BPDU t=18.01 bridge=b2 port=0 root=0 priority=32768 cost=5 sender=1 senderPriority=32768 senderPort=1 expires=28
+[INFO]	STP_STATE t=18.01 bridge=b2 root=0 priority=32768 cost=5 rootPort=1 port=0:b1:alternate:blocking port=1:b3:root:forwarding
+** Event #151  t=18.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    40% completed  (40% total)
+[DETAIL]	STP_BPDU t=18.01 bridge=b4 port=2 root=0 priority=32768 cost=5 sender=1 senderPriority=32768 senderPort=2 expires=28
+[INFO]	STP_STATE t=18.01 bridge=b4 root=0 priority=32768 cost=5 rootPort=0 port=0:b3:root:forwarding port=1:b0:disabled:down port=2:b1:alternate:blocking
+** Event #152  t=18.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    40% completed  (40% total)
+[DETAIL]	STP_BPDU t=18.01 bridge=b1 port=1 root=0 priority=32768 cost=5 sender=2 senderPriority=32768 senderPort=0 expires=28
+[INFO]	STP_STATE t=18.01 bridge=b1 root=0 priority=32768 cost=5 rootPort=2 port=0:b0:disabled:down port=1:b2:designated:forwarding port=2:b4:root:forwarding
+** Event #153  t=18.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    40% completed  (40% total)
+[DETAIL]	STP_BPDU t=18.01 bridge=b3 port=0 root=0 priority=32768 cost=5 sender=2 senderPriority=32768 senderPort=1 expires=28
+[INFO]	STP_STATE t=18.01 bridge=b3 root=0 priority=32768 cost=5 rootPort=1 port=0:b2:alternate:blocking port=1:b4:root:forwarding
+** Event #154  t=18.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    40% completed  (40% total)
+[DETAIL]	STP_BPDU t=18.01 bridge=b2 port=1 root=0 priority=32768 cost=5 sender=3 senderPriority=32768 senderPort=0 expires=28
+[INFO]	STP_STATE t=18.01 bridge=b2 root=0 priority=32768 cost=6 rootPort=0 port=0:b1:root:forwarding port=1:b3:alternate:blocking
+** Event #155  t=18.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    40% completed  (40% total)
+[DETAIL]	STP_BPDU t=18.01 bridge=b4 port=0 root=0 priority=32768 cost=5 sender=3 senderPriority=32768 senderPort=1 expires=28
+[INFO]	STP_STATE t=18.01 bridge=b4 root=0 priority=32768 cost=6 rootPort=2 port=0:b3:alternate:blocking port=1:b0:disabled:down port=2:b1:root:forwarding
+** Event #156  t=18.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    40% completed  (40% total)
+[DETAIL]	STP_BPDU t=18.01 bridge=b3 port=1 root=0 priority=32768 cost=5 sender=4 senderPriority=32768 senderPort=0 expires=28
+[INFO]	STP_STATE t=18.01 bridge=b3 root=0 priority=32768 cost=6 rootPort=0 port=0:b2:root:forwarding port=1:b4:alternate:blocking
+** Event #157  t=18.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    40% completed  (40% total)
+[DETAIL]	STP_BPDU t=18.01 bridge=b1 port=2 root=0 priority=32768 cost=5 sender=4 senderPriority=32768 senderPort=2 expires=28
+[INFO]	STP_STATE t=18.01 bridge=b1 root=0 priority=32768 cost=6 rootPort=1 port=0:b0:disabled:down port=1:b2:root:forwarding port=2:b4:alternate:blocking
+** Event #158  t=20  on hello (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    44% completed  (44% total)
+** Event #159  t=20  on hello (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    44% completed  (44% total)
+** Event #160  t=20  on hello (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    44% completed  (44% total)
+** Event #161  t=20  on hello (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    44% completed  (44% total)
+** Event #162  t=20  on hello (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    44% completed  (44% total)
+** Event #163  t=20.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    44% completed  (44% total)
+[DETAIL]	STP_BPDU t=20.01 bridge=b2 port=0 root=0 priority=32768 cost=6 sender=1 senderPriority=32768 senderPort=1 expires=28
+[INFO]	STP_STATE t=20.01 bridge=b2 root=0 priority=32768 cost=6 rootPort=1 port=0:b1:alternate:blocking port=1:b3:root:forwarding
+** Event #164  t=20.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    44% completed  (44% total)
+[DETAIL]	STP_BPDU t=20.01 bridge=b4 port=2 root=0 priority=32768 cost=6 sender=1 senderPriority=32768 senderPort=2 expires=28
+[INFO]	STP_STATE t=20.01 bridge=b4 root=0 priority=32768 cost=6 rootPort=0 port=0:b3:root:forwarding port=1:b0:disabled:down port=2:b1:alternate:blocking
+** Event #165  t=20.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    44% completed  (44% total)
+[DETAIL]	STP_BPDU t=20.01 bridge=b1 port=1 root=0 priority=32768 cost=6 sender=2 senderPriority=32768 senderPort=0 expires=28
+[INFO]	STP_STATE t=20.01 bridge=b1 root=0 priority=32768 cost=6 rootPort=2 port=0:b0:disabled:down port=1:b2:designated:forwarding port=2:b4:root:forwarding
+** Event #166  t=20.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    44% completed  (44% total)
+[DETAIL]	STP_BPDU t=20.01 bridge=b3 port=0 root=0 priority=32768 cost=6 sender=2 senderPriority=32768 senderPort=1 expires=28
+[INFO]	STP_STATE t=20.01 bridge=b3 root=0 priority=32768 cost=6 rootPort=1 port=0:b2:alternate:blocking port=1:b4:root:forwarding
+** Event #167  t=20.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    44% completed  (44% total)
+[DETAIL]	STP_BPDU t=20.01 bridge=b2 port=1 root=0 priority=32768 cost=6 sender=3 senderPriority=32768 senderPort=0 expires=28
+[INFO]	STP_STATE t=20.01 bridge=b2 root=0 priority=32768 cost=7 rootPort=0 port=0:b1:root:forwarding port=1:b3:alternate:blocking
+** Event #168  t=20.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    44% completed  (44% total)
+[DETAIL]	STP_BPDU t=20.01 bridge=b4 port=0 root=0 priority=32768 cost=6 sender=3 senderPriority=32768 senderPort=1 expires=28
+[INFO]	STP_STATE t=20.01 bridge=b4 root=0 priority=32768 cost=7 rootPort=2 port=0:b3:alternate:blocking port=1:b0:disabled:down port=2:b1:root:forwarding
+** Event #169  t=20.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    44% completed  (44% total)
+[DETAIL]	STP_BPDU t=20.01 bridge=b3 port=1 root=0 priority=32768 cost=6 sender=4 senderPriority=32768 senderPort=0 expires=28
+[INFO]	STP_STATE t=20.01 bridge=b3 root=0 priority=32768 cost=7 rootPort=0 port=0:b2:root:forwarding port=1:b4:alternate:blocking
+** Event #170  t=20.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    44% completed  (44% total)
+[DETAIL]	STP_BPDU t=20.01 bridge=b1 port=2 root=0 priority=32768 cost=6 sender=4 senderPriority=32768 senderPort=2 expires=28
+[INFO]	STP_STATE t=20.01 bridge=b1 root=0 priority=32768 cost=7 rootPort=1 port=0:b0:disabled:down port=1:b2:root:forwarding port=2:b4:alternate:blocking
+** Event #171  t=22  on hello (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    48% completed  (48% total)
+** Event #172  t=22  on hello (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    48% completed  (48% total)
+** Event #173  t=22  on hello (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    48% completed  (48% total)
+** Event #174  t=22  on hello (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    48% completed  (48% total)
+** Event #175  t=22  on hello (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    48% completed  (48% total)
+** Event #176  t=22.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    48% completed  (48% total)
+[DETAIL]	STP_BPDU t=22.01 bridge=b2 port=0 root=0 priority=32768 cost=7 sender=1 senderPriority=32768 senderPort=1 expires=28
+[INFO]	STP_STATE t=22.01 bridge=b2 root=0 priority=32768 cost=7 rootPort=1 port=0:b1:alternate:blocking port=1:b3:root:forwarding
+** Event #177  t=22.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    48% completed  (48% total)
+[DETAIL]	STP_BPDU t=22.01 bridge=b4 port=2 root=0 priority=32768 cost=7 sender=1 senderPriority=32768 senderPort=2 expires=28
+[INFO]	STP_STATE t=22.01 bridge=b4 root=0 priority=32768 cost=7 rootPort=0 port=0:b3:root:forwarding port=1:b0:disabled:down port=2:b1:alternate:blocking
+** Event #178  t=22.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    48% completed  (48% total)
+[DETAIL]	STP_BPDU t=22.01 bridge=b1 port=1 root=0 priority=32768 cost=7 sender=2 senderPriority=32768 senderPort=0 expires=28
+[INFO]	STP_STATE t=22.01 bridge=b1 root=0 priority=32768 cost=7 rootPort=2 port=0:b0:disabled:down port=1:b2:designated:forwarding port=2:b4:root:forwarding
+** Event #179  t=22.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    48% completed  (48% total)
+[DETAIL]	STP_BPDU t=22.01 bridge=b3 port=0 root=0 priority=32768 cost=7 sender=2 senderPriority=32768 senderPort=1 expires=28
+[INFO]	STP_STATE t=22.01 bridge=b3 root=0 priority=32768 cost=7 rootPort=1 port=0:b2:alternate:blocking port=1:b4:root:forwarding
+** Event #180  t=22.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    48% completed  (48% total)
+[DETAIL]	STP_BPDU t=22.01 bridge=b2 port=1 root=0 priority=32768 cost=7 sender=3 senderPriority=32768 senderPort=0 expires=28
+[INFO]	STP_STATE t=22.01 bridge=b2 root=0 priority=32768 cost=8 rootPort=0 port=0:b1:root:forwarding port=1:b3:alternate:blocking
+** Event #181  t=22.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    48% completed  (48% total)
+[DETAIL]	STP_BPDU t=22.01 bridge=b4 port=0 root=0 priority=32768 cost=7 sender=3 senderPriority=32768 senderPort=1 expires=28
+[INFO]	STP_STATE t=22.01 bridge=b4 root=0 priority=32768 cost=8 rootPort=2 port=0:b3:alternate:blocking port=1:b0:disabled:down port=2:b1:root:forwarding
+** Event #182  t=22.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    48% completed  (48% total)
+[DETAIL]	STP_BPDU t=22.01 bridge=b3 port=1 root=0 priority=32768 cost=7 sender=4 senderPriority=32768 senderPort=0 expires=28
+[INFO]	STP_STATE t=22.01 bridge=b3 root=0 priority=32768 cost=8 rootPort=0 port=0:b2:root:forwarding port=1:b4:alternate:blocking
+** Event #183  t=22.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    48% completed  (48% total)
+[DETAIL]	STP_BPDU t=22.01 bridge=b1 port=2 root=0 priority=32768 cost=7 sender=4 senderPriority=32768 senderPort=2 expires=28
+[INFO]	STP_STATE t=22.01 bridge=b1 root=0 priority=32768 cost=8 rootPort=1 port=0:b0:disabled:down port=1:b2:root:forwarding port=2:b4:alternate:blocking
+** Event #184  t=24  on hello (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    53% completed  (53% total)
+** Event #185  t=24  on hello (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    53% completed  (53% total)
+** Event #186  t=24  on hello (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    53% completed  (53% total)
+** Event #187  t=24  on hello (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    53% completed  (53% total)
+** Event #188  t=24  on hello (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    53% completed  (53% total)
+** Event #189  t=24.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    53% completed  (53% total)
+[DETAIL]	STP_BPDU t=24.01 bridge=b2 port=0 root=0 priority=32768 cost=8 sender=1 senderPriority=32768 senderPort=1 expires=28
+[INFO]	STP_STATE t=24.01 bridge=b2 root=0 priority=32768 cost=8 rootPort=1 port=0:b1:alternate:blocking port=1:b3:root:forwarding
+** Event #190  t=24.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    53% completed  (53% total)
+[DETAIL]	STP_BPDU t=24.01 bridge=b4 port=2 root=0 priority=32768 cost=8 sender=1 senderPriority=32768 senderPort=2 expires=28
+[INFO]	STP_STATE t=24.01 bridge=b4 root=0 priority=32768 cost=8 rootPort=0 port=0:b3:root:forwarding port=1:b0:disabled:down port=2:b1:alternate:blocking
+** Event #191  t=24.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    53% completed  (53% total)
+[DETAIL]	STP_BPDU t=24.01 bridge=b1 port=1 root=0 priority=32768 cost=8 sender=2 senderPriority=32768 senderPort=0 expires=28
+[INFO]	STP_STATE t=24.01 bridge=b1 root=0 priority=32768 cost=8 rootPort=2 port=0:b0:disabled:down port=1:b2:designated:forwarding port=2:b4:root:forwarding
+** Event #192  t=24.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    53% completed  (53% total)
+[DETAIL]	STP_BPDU t=24.01 bridge=b3 port=0 root=0 priority=32768 cost=8 sender=2 senderPriority=32768 senderPort=1 expires=28
+[INFO]	STP_STATE t=24.01 bridge=b3 root=0 priority=32768 cost=8 rootPort=1 port=0:b2:alternate:blocking port=1:b4:root:forwarding
+** Event #193  t=24.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    53% completed  (53% total)
+[DETAIL]	STP_BPDU t=24.01 bridge=b2 port=1 root=0 priority=32768 cost=8 sender=3 senderPriority=32768 senderPort=0 expires=28
+[INFO]	STP_STATE t=24.01 bridge=b2 root=0 priority=32768 cost=9 rootPort=0 port=0:b1:root:forwarding port=1:b3:alternate:blocking
+** Event #194  t=24.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    53% completed  (53% total)
+[DETAIL]	STP_BPDU t=24.01 bridge=b4 port=0 root=0 priority=32768 cost=8 sender=3 senderPriority=32768 senderPort=1 expires=28
+[INFO]	STP_STATE t=24.01 bridge=b4 root=0 priority=32768 cost=9 rootPort=2 port=0:b3:alternate:blocking port=1:b0:disabled:down port=2:b1:root:forwarding
+** Event #195  t=24.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    53% completed  (53% total)
+[DETAIL]	STP_BPDU t=24.01 bridge=b3 port=1 root=0 priority=32768 cost=8 sender=4 senderPriority=32768 senderPort=0 expires=28
+[INFO]	STP_STATE t=24.01 bridge=b3 root=0 priority=32768 cost=9 rootPort=0 port=0:b2:root:forwarding port=1:b4:alternate:blocking
+** Event #196  t=24.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    53% completed  (53% total)
+[DETAIL]	STP_BPDU t=24.01 bridge=b1 port=2 root=0 priority=32768 cost=8 sender=4 senderPriority=32768 senderPort=2 expires=28
+[INFO]	STP_STATE t=24.01 bridge=b1 root=0 priority=32768 cost=9 rootPort=1 port=0:b0:disabled:down port=1:b2:root:forwarding port=2:b4:alternate:blocking
+** Event #197  t=26  on hello (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    57% completed  (57% total)
+** Event #198  t=26  on hello (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    57% completed  (57% total)
+** Event #199  t=26  on hello (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    57% completed  (57% total)
+** Event #200  t=26  on hello (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    57% completed  (57% total)
+** Event #201  t=26  on hello (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    57% completed  (57% total)
+** Event #202  t=26.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    57% completed  (57% total)
+[DETAIL]	STP_BPDU t=26.01 bridge=b2 port=0 root=0 priority=32768 cost=9 sender=1 senderPriority=32768 senderPort=1 expires=28
+[INFO]	STP_STATE t=26.01 bridge=b2 root=0 priority=32768 cost=9 rootPort=1 port=0:b1:alternate:blocking port=1:b3:root:forwarding
+** Event #203  t=26.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    57% completed  (57% total)
+[DETAIL]	STP_BPDU t=26.01 bridge=b4 port=2 root=0 priority=32768 cost=9 sender=1 senderPriority=32768 senderPort=2 expires=28
+[INFO]	STP_STATE t=26.01 bridge=b4 root=0 priority=32768 cost=9 rootPort=0 port=0:b3:root:forwarding port=1:b0:disabled:down port=2:b1:alternate:blocking
+** Event #204  t=26.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    57% completed  (57% total)
+[DETAIL]	STP_BPDU t=26.01 bridge=b1 port=1 root=0 priority=32768 cost=9 sender=2 senderPriority=32768 senderPort=0 expires=28
+[INFO]	STP_STATE t=26.01 bridge=b1 root=0 priority=32768 cost=9 rootPort=2 port=0:b0:disabled:down port=1:b2:designated:forwarding port=2:b4:root:forwarding
+** Event #205  t=26.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    57% completed  (57% total)
+[DETAIL]	STP_BPDU t=26.01 bridge=b3 port=0 root=0 priority=32768 cost=9 sender=2 senderPriority=32768 senderPort=1 expires=28
+[INFO]	STP_STATE t=26.01 bridge=b3 root=0 priority=32768 cost=9 rootPort=1 port=0:b2:alternate:blocking port=1:b4:root:forwarding
+** Event #206  t=26.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    57% completed  (57% total)
+[DETAIL]	STP_BPDU t=26.01 bridge=b2 port=1 root=0 priority=32768 cost=9 sender=3 senderPriority=32768 senderPort=0 expires=28
+[INFO]	STP_STATE t=26.01 bridge=b2 root=0 priority=32768 cost=10 rootPort=0 port=0:b1:root:forwarding port=1:b3:alternate:blocking
+** Event #207  t=26.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    57% completed  (57% total)
+[DETAIL]	STP_BPDU t=26.01 bridge=b4 port=0 root=0 priority=32768 cost=9 sender=3 senderPriority=32768 senderPort=1 expires=28
+[INFO]	STP_STATE t=26.01 bridge=b4 root=0 priority=32768 cost=10 rootPort=2 port=0:b3:alternate:blocking port=1:b0:disabled:down port=2:b1:root:forwarding
+** Event #208  t=26.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    57% completed  (57% total)
+[DETAIL]	STP_BPDU t=26.01 bridge=b3 port=1 root=0 priority=32768 cost=9 sender=4 senderPriority=32768 senderPort=0 expires=28
+[INFO]	STP_STATE t=26.01 bridge=b3 root=0 priority=32768 cost=10 rootPort=0 port=0:b2:root:forwarding port=1:b4:alternate:blocking
+** Event #209  t=26.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    57% completed  (57% total)
+[DETAIL]	STP_BPDU t=26.01 bridge=b1 port=2 root=0 priority=32768 cost=9 sender=4 senderPriority=32768 senderPort=2 expires=28
+[INFO]	STP_STATE t=26.01 bridge=b1 root=0 priority=32768 cost=10 rootPort=1 port=0:b0:disabled:down port=1:b2:root:forwarding port=2:b4:alternate:blocking
+** Event #210  t=28  on portChange (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    62% completed  (62% total)
+[INFO]	STP_EXPIRE t=28 bridge=b2 port=0
+[INFO]	STP_EXPIRE t=28 bridge=b2 port=1
+[INFO]	STP_STATE t=28 bridge=b2 root=2 priority=32768 cost=0 rootPort=-1 port=0:b1:designated:forwarding port=1:b3:designated:forwarding
+** Event #211  t=28  on portChange (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    62% completed  (62% total)
+[INFO]	STP_EXPIRE t=28 bridge=b4 port=0
+[INFO]	STP_EXPIRE t=28 bridge=b4 port=2
+[INFO]	STP_STATE t=28 bridge=b4 root=4 priority=32768 cost=0 rootPort=-1 port=0:b3:designated:forwarding port=1:b0:disabled:down port=2:b1:designated:forwarding
+** Event #212  t=28  on portChange (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    62% completed  (62% total)
+[INFO]	STP_EXPIRE t=28 bridge=b3 port=0
+[INFO]	STP_EXPIRE t=28 bridge=b3 port=1
+[INFO]	STP_STATE t=28 bridge=b3 root=3 priority=32768 cost=0 rootPort=-1 port=0:b2:designated:forwarding port=1:b4:designated:forwarding
+** Event #213  t=28  on portChange (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    62% completed  (62% total)
+[INFO]	STP_EXPIRE t=28 bridge=b1 port=1
+[INFO]	STP_EXPIRE t=28 bridge=b1 port=2
+[INFO]	STP_STATE t=28 bridge=b1 root=1 priority=32768 cost=0 rootPort=-1 port=0:b0:disabled:down port=1:b2:designated:forwarding port=2:b4:designated:forwarding
+** Event #214  t=28  on hello (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    62% completed  (62% total)
+** Event #215  t=28  on hello (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    62% completed  (62% total)
+** Event #216  t=28  on hello (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    62% completed  (62% total)
+** Event #217  t=28  on hello (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    62% completed  (62% total)
+** Event #218  t=28  on hello (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    62% completed  (62% total)
+** Event #219  t=28.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    62% completed  (62% total)
+[DETAIL]	STP_BPDU t=28.01 bridge=b2 port=0 root=1 priority=32768 cost=0 sender=1 senderPriority=32768 senderPort=1 expires=48
+[INFO]	STP_STATE t=28.01 bridge=b2 root=1 priority=32768 cost=1 rootPort=0 port=0:b1:root:forwarding port=1:b3:designated:forwarding
+** Event #220  t=28.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    62% completed  (62% total)
+[DETAIL]	STP_BPDU t=28.01 bridge=b4 port=2 root=1 priority=32768 cost=0 sender=1 senderPriority=32768 senderPort=2 expires=48
+[INFO]	STP_STATE t=28.01 bridge=b4 root=1 priority=32768 cost=1 rootPort=2 port=0:b3:designated:forwarding port=1:b0:disabled:down port=2:b1:root:forwarding
+** Event #221  t=28.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    62% completed  (62% total)
+[DETAIL]	STP_BPDU t=28.01 bridge=b1 port=1 root=2 priority=32768 cost=0 sender=2 senderPriority=32768 senderPort=0 expires=48
+** Event #222  t=28.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    62% completed  (62% total)
+[DETAIL]	STP_BPDU t=28.01 bridge=b3 port=0 root=2 priority=32768 cost=0 sender=2 senderPriority=32768 senderPort=1 expires=48
+[INFO]	STP_STATE t=28.01 bridge=b3 root=2 priority=32768 cost=1 rootPort=0 port=0:b2:root:forwarding port=1:b4:designated:forwarding
+** Event #223  t=28.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    62% completed  (62% total)
+[DETAIL]	STP_BPDU t=28.01 bridge=b2 port=1 root=3 priority=32768 cost=0 sender=3 senderPriority=32768 senderPort=0 expires=48
+** Event #224  t=28.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    62% completed  (62% total)
+[DETAIL]	STP_BPDU t=28.01 bridge=b4 port=0 root=3 priority=32768 cost=0 sender=3 senderPriority=32768 senderPort=1 expires=48
+** Event #225  t=28.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    62% completed  (62% total)
+[DETAIL]	STP_BPDU t=28.01 bridge=b3 port=1 root=4 priority=32768 cost=0 sender=4 senderPriority=32768 senderPort=0 expires=48
+** Event #226  t=28.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    62% completed  (62% total)
+[DETAIL]	STP_BPDU t=28.01 bridge=b1 port=2 root=4 priority=32768 cost=0 sender=4 senderPriority=32768 senderPort=2 expires=48
+** Event #227  t=30  on hello (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    66% completed  (66% total)
+** Event #228  t=30  on hello (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    66% completed  (66% total)
+** Event #229  t=30  on hello (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    66% completed  (66% total)
+** Event #230  t=30  on hello (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    66% completed  (66% total)
+** Event #231  t=30  on hello (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    66% completed  (66% total)
+** Event #232  t=30.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    66% completed  (66% total)
+[DETAIL]	STP_BPDU t=30.01 bridge=b2 port=0 root=1 priority=32768 cost=0 sender=1 senderPriority=32768 senderPort=1 expires=50
+** Event #233  t=30.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    66% completed  (66% total)
+[DETAIL]	STP_BPDU t=30.01 bridge=b4 port=2 root=1 priority=32768 cost=0 sender=1 senderPriority=32768 senderPort=2 expires=50
+** Event #234  t=30.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    66% completed  (66% total)
+[DETAIL]	STP_BPDU t=30.01 bridge=b1 port=1 root=1 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=0 expires=48
+** Event #235  t=30.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    66% completed  (66% total)
+[DETAIL]	STP_BPDU t=30.01 bridge=b3 port=0 root=1 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=1 expires=48
+[INFO]	STP_STATE t=30.01 bridge=b3 root=1 priority=32768 cost=2 rootPort=0 port=0:b2:root:forwarding port=1:b4:designated:forwarding
+** Event #236  t=30.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    66% completed  (66% total)
+[DETAIL]	STP_BPDU t=30.01 bridge=b2 port=1 root=2 priority=32768 cost=1 sender=3 senderPriority=32768 senderPort=0 expires=48
+** Event #237  t=30.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    66% completed  (66% total)
+[DETAIL]	STP_BPDU t=30.01 bridge=b4 port=0 root=2 priority=32768 cost=1 sender=3 senderPriority=32768 senderPort=1 expires=48
+** Event #238  t=30.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    66% completed  (66% total)
+[DETAIL]	STP_BPDU t=30.01 bridge=b3 port=1 root=1 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=0 expires=48
+[INFO]	STP_STATE t=30.01 bridge=b3 root=1 priority=32768 cost=2 rootPort=0 port=0:b2:root:forwarding port=1:b4:alternate:blocking
+** Event #239  t=30.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    66% completed  (66% total)
+[DETAIL]	STP_BPDU t=30.01 bridge=b1 port=2 root=1 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=2 expires=48
+** Event #240  t=32  on hello (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    71% completed  (71% total)
+** Event #241  t=32  on hello (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    71% completed  (71% total)
+** Event #242  t=32  on hello (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    71% completed  (71% total)
+** Event #243  t=32  on hello (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    71% completed  (71% total)
+** Event #244  t=32  on hello (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    71% completed  (71% total)
+** Event #245  t=32.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    71% completed  (71% total)
+[DETAIL]	STP_BPDU t=32.01 bridge=b2 port=0 root=1 priority=32768 cost=0 sender=1 senderPriority=32768 senderPort=1 expires=52
+** Event #246  t=32.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    71% completed  (71% total)
+[DETAIL]	STP_BPDU t=32.01 bridge=b4 port=2 root=1 priority=32768 cost=0 sender=1 senderPriority=32768 senderPort=2 expires=52
+** Event #247  t=32.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    71% completed  (71% total)
+[DETAIL]	STP_BPDU t=32.01 bridge=b1 port=1 root=1 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=0 expires=50
+** Event #248  t=32.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    71% completed  (71% total)
+[DETAIL]	STP_BPDU t=32.01 bridge=b3 port=0 root=1 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=1 expires=50
+** Event #249  t=32.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    71% completed  (71% total)
+[DETAIL]	STP_BPDU t=32.01 bridge=b2 port=1 root=1 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=0 expires=48
+** Event #250  t=32.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    71% completed  (71% total)
+[DETAIL]	STP_BPDU t=32.01 bridge=b4 port=0 root=1 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=1 expires=48
+** Event #251  t=32.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    71% completed  (71% total)
+[DETAIL]	STP_BPDU t=32.01 bridge=b3 port=1 root=1 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=0 expires=50
+** Event #252  t=32.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    71% completed  (71% total)
+[DETAIL]	STP_BPDU t=32.01 bridge=b1 port=2 root=1 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=2 expires=50
+** Event #253  t=34  on hello (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    75% completed  (75% total)
+** Event #254  t=34  on hello (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    75% completed  (75% total)
+** Event #255  t=34  on hello (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    75% completed  (75% total)
+** Event #256  t=34  on hello (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    75% completed  (75% total)
+** Event #257  t=34  on hello (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    75% completed  (75% total)
+** Event #258  t=34.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    75% completed  (75% total)
+[DETAIL]	STP_BPDU t=34.01 bridge=b2 port=0 root=1 priority=32768 cost=0 sender=1 senderPriority=32768 senderPort=1 expires=54
+** Event #259  t=34.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    75% completed  (75% total)
+[DETAIL]	STP_BPDU t=34.01 bridge=b4 port=2 root=1 priority=32768 cost=0 sender=1 senderPriority=32768 senderPort=2 expires=54
+** Event #260  t=34.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    75% completed  (75% total)
+[DETAIL]	STP_BPDU t=34.01 bridge=b1 port=1 root=1 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=0 expires=52
+** Event #261  t=34.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    75% completed  (75% total)
+[DETAIL]	STP_BPDU t=34.01 bridge=b3 port=0 root=1 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=1 expires=52
+** Event #262  t=34.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    75% completed  (75% total)
+[DETAIL]	STP_BPDU t=34.01 bridge=b2 port=1 root=1 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=0 expires=50
+** Event #263  t=34.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    75% completed  (75% total)
+[DETAIL]	STP_BPDU t=34.01 bridge=b4 port=0 root=1 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=1 expires=50
+** Event #264  t=34.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    75% completed  (75% total)
+[DETAIL]	STP_BPDU t=34.01 bridge=b3 port=1 root=1 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=0 expires=52
+** Event #265  t=34.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    75% completed  (75% total)
+[DETAIL]	STP_BPDU t=34.01 bridge=b1 port=2 root=1 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=2 expires=52
+** Event #266  t=36  on hello (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    80% completed  (80% total)
+** Event #267  t=36  on hello (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    80% completed  (80% total)
+** Event #268  t=36  on hello (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    80% completed  (80% total)
+** Event #269  t=36  on hello (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    80% completed  (80% total)
+** Event #270  t=36  on hello (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    80% completed  (80% total)
+** Event #271  t=36.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    80% completed  (80% total)
+[DETAIL]	STP_BPDU t=36.01 bridge=b2 port=0 root=1 priority=32768 cost=0 sender=1 senderPriority=32768 senderPort=1 expires=56
+** Event #272  t=36.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    80% completed  (80% total)
+[DETAIL]	STP_BPDU t=36.01 bridge=b4 port=2 root=1 priority=32768 cost=0 sender=1 senderPriority=32768 senderPort=2 expires=56
+** Event #273  t=36.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    80% completed  (80% total)
+[DETAIL]	STP_BPDU t=36.01 bridge=b1 port=1 root=1 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=0 expires=54
+** Event #274  t=36.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    80% completed  (80% total)
+[DETAIL]	STP_BPDU t=36.01 bridge=b3 port=0 root=1 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=1 expires=54
+** Event #275  t=36.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    80% completed  (80% total)
+[DETAIL]	STP_BPDU t=36.01 bridge=b2 port=1 root=1 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=0 expires=52
+** Event #276  t=36.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    80% completed  (80% total)
+[DETAIL]	STP_BPDU t=36.01 bridge=b4 port=0 root=1 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=1 expires=52
+** Event #277  t=36.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    80% completed  (80% total)
+[DETAIL]	STP_BPDU t=36.01 bridge=b3 port=1 root=1 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=0 expires=54
+** Event #278  t=36.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    80% completed  (80% total)
+[DETAIL]	STP_BPDU t=36.01 bridge=b1 port=2 root=1 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=2 expires=54
+** Event #279  t=38  on hello (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    84% completed  (84% total)
+** Event #280  t=38  on hello (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    84% completed  (84% total)
+** Event #281  t=38  on hello (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    84% completed  (84% total)
+** Event #282  t=38  on hello (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    84% completed  (84% total)
+** Event #283  t=38  on hello (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    84% completed  (84% total)
+** Event #284  t=38.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    84% completed  (84% total)
+[DETAIL]	STP_BPDU t=38.01 bridge=b2 port=0 root=1 priority=32768 cost=0 sender=1 senderPriority=32768 senderPort=1 expires=58
+** Event #285  t=38.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    84% completed  (84% total)
+[DETAIL]	STP_BPDU t=38.01 bridge=b4 port=2 root=1 priority=32768 cost=0 sender=1 senderPriority=32768 senderPort=2 expires=58
+** Event #286  t=38.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    84% completed  (84% total)
+[DETAIL]	STP_BPDU t=38.01 bridge=b1 port=1 root=1 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=0 expires=56
+** Event #287  t=38.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    84% completed  (84% total)
+[DETAIL]	STP_BPDU t=38.01 bridge=b3 port=0 root=1 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=1 expires=56
+** Event #288  t=38.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    84% completed  (84% total)
+[DETAIL]	STP_BPDU t=38.01 bridge=b2 port=1 root=1 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=0 expires=54
+** Event #289  t=38.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    84% completed  (84% total)
+[DETAIL]	STP_BPDU t=38.01 bridge=b4 port=0 root=1 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=1 expires=54
+** Event #290  t=38.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    84% completed  (84% total)
+[DETAIL]	STP_BPDU t=38.01 bridge=b3 port=1 root=1 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=0 expires=56
+** Event #291  t=38.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    84% completed  (84% total)
+[DETAIL]	STP_BPDU t=38.01 bridge=b1 port=2 root=1 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=2 expires=56
+** Event #292  t=40  on hello (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    88% completed  (88% total)
+** Event #293  t=40  on hello (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    88% completed  (88% total)
+** Event #294  t=40  on hello (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    88% completed  (88% total)
+** Event #295  t=40  on hello (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    88% completed  (88% total)
+** Event #296  t=40  on hello (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    88% completed  (88% total)
+** Event #297  t=40.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    88% completed  (88% total)
+[DETAIL]	STP_BPDU t=40.01 bridge=b2 port=0 root=1 priority=32768 cost=0 sender=1 senderPriority=32768 senderPort=1 expires=60
+** Event #298  t=40.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    88% completed  (88% total)
+[DETAIL]	STP_BPDU t=40.01 bridge=b4 port=2 root=1 priority=32768 cost=0 sender=1 senderPriority=32768 senderPort=2 expires=60
+** Event #299  t=40.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    88% completed  (88% total)
+[DETAIL]	STP_BPDU t=40.01 bridge=b1 port=1 root=1 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=0 expires=58
+** Event #300  t=40.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    88% completed  (88% total)
+[DETAIL]	STP_BPDU t=40.01 bridge=b3 port=0 root=1 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=1 expires=58
+** Event #301  t=40.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    88% completed  (88% total)
+[DETAIL]	STP_BPDU t=40.01 bridge=b2 port=1 root=1 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=0 expires=56
+** Event #302  t=40.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    88% completed  (88% total)
+[DETAIL]	STP_BPDU t=40.01 bridge=b4 port=0 root=1 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=1 expires=56
+** Event #303  t=40.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    88% completed  (88% total)
+[DETAIL]	STP_BPDU t=40.01 bridge=b3 port=1 root=1 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=0 expires=58
+** Event #304  t=40.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    88% completed  (88% total)
+[DETAIL]	STP_BPDU t=40.01 bridge=b1 port=2 root=1 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=2 expires=58
+** Event #305  t=42  on hello (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    93% completed  (93% total)
+** Event #306  t=42  on hello (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    93% completed  (93% total)
+** Event #307  t=42  on hello (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    93% completed  (93% total)
+** Event #308  t=42  on hello (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    93% completed  (93% total)
+** Event #309  t=42  on hello (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    93% completed  (93% total)
+** Event #310  t=42.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    93% completed  (93% total)
+[DETAIL]	STP_BPDU t=42.01 bridge=b2 port=0 root=1 priority=32768 cost=0 sender=1 senderPriority=32768 senderPort=1 expires=62
+** Event #311  t=42.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    93% completed  (93% total)
+[DETAIL]	STP_BPDU t=42.01 bridge=b4 port=2 root=1 priority=32768 cost=0 sender=1 senderPriority=32768 senderPort=2 expires=62
+** Event #312  t=42.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    93% completed  (93% total)
+[DETAIL]	STP_BPDU t=42.01 bridge=b1 port=1 root=1 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=0 expires=60
+** Event #313  t=42.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    93% completed  (93% total)
+[DETAIL]	STP_BPDU t=42.01 bridge=b3 port=0 root=1 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=1 expires=60
+** Event #314  t=42.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    93% completed  (93% total)
+[DETAIL]	STP_BPDU t=42.01 bridge=b2 port=1 root=1 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=0 expires=58
+** Event #315  t=42.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    93% completed  (93% total)
+[DETAIL]	STP_BPDU t=42.01 bridge=b4 port=0 root=1 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=1 expires=58
+** Event #316  t=42.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    93% completed  (93% total)
+[DETAIL]	STP_BPDU t=42.01 bridge=b3 port=1 root=1 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=0 expires=60
+** Event #317  t=42.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    93% completed  (93% total)
+[DETAIL]	STP_BPDU t=42.01 bridge=b1 port=2 root=1 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=2 expires=60
+** Event #318  t=44  on hello (omnetpp::cMessage)  in StpFive.b0 (StpBridge, id=2)    97% completed  (97% total)
+** Event #319  t=44  on hello (omnetpp::cMessage)  in StpFive.b1 (StpBridge, id=3)    97% completed  (97% total)
+** Event #320  t=44  on hello (omnetpp::cMessage)  in StpFive.b2 (StpBridge, id=4)    97% completed  (97% total)
+** Event #321  t=44  on hello (omnetpp::cMessage)  in StpFive.b3 (StpBridge, id=5)    97% completed  (97% total)
+** Event #322  t=44  on hello (omnetpp::cMessage)  in StpFive.b4 (StpBridge, id=6)    97% completed  (97% total)
+** Event #323  t=44.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    97% completed  (97% total)
+[DETAIL]	STP_BPDU t=44.01 bridge=b2 port=0 root=1 priority=32768 cost=0 sender=1 senderPriority=32768 senderPort=1 expires=64
+** Event #324  t=44.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    97% completed  (97% total)
+[DETAIL]	STP_BPDU t=44.01 bridge=b4 port=2 root=1 priority=32768 cost=0 sender=1 senderPriority=32768 senderPort=2 expires=64
+** Event #325  t=44.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    97% completed  (97% total)
+[DETAIL]	STP_BPDU t=44.01 bridge=b1 port=1 root=1 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=0 expires=62
+** Event #326  t=44.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    97% completed  (97% total)
+[DETAIL]	STP_BPDU t=44.01 bridge=b3 port=0 root=1 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=1 expires=62
+** Event #327  t=44.01  on BPDU (Bpdu)  in StpFive.b2 (StpBridge, id=4)    97% completed  (97% total)
+[DETAIL]	STP_BPDU t=44.01 bridge=b2 port=1 root=1 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=0 expires=60
+** Event #328  t=44.01  on BPDU (Bpdu)  in StpFive.b4 (StpBridge, id=6)    97% completed  (97% total)
+[DETAIL]	STP_BPDU t=44.01 bridge=b4 port=0 root=1 priority=32768 cost=2 sender=3 senderPriority=32768 senderPort=1 expires=60
+** Event #329  t=44.01  on BPDU (Bpdu)  in StpFive.b3 (StpBridge, id=5)    97% completed  (97% total)
+[DETAIL]	STP_BPDU t=44.01 bridge=b3 port=1 root=1 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=0 expires=62
+** Event #330  t=44.01  on BPDU (Bpdu)  in StpFive.b1 (StpBridge, id=3)    97% completed  (97% total)
+[DETAIL]	STP_BPDU t=44.01 bridge=b1 port=2 root=1 priority=32768 cost=1 sender=4 senderPriority=32768 senderPort=2 expires=62
+** Event #331  t=45  on endsimulation (omnetpp::cEndSimulationEvent)    100% completed  (100% total)
+
+<!> Simulation time limit reached -- at t=45s, event #331
+
+Calling finish() at end of Run #0...
+
+End.

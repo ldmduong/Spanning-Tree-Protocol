@@ -1,0 +1,34 @@
+INFO Using specified projects [omnetpp-6.5.0] with effective projects [omnetpp-6.5.0] in workspace /home/duongldm/omnet-ws
+INFO Running command for projects [omnetpp-6.5.0] in workspace /home/duongldm/omnet-ws in nixless mode
+Activating python virtual environment in '/home/duongldm/omnet-ws/omnetpp-6.5.0/.venv'
+Environment for 'omnetpp-6.5.0' in directory '/home/duongldm/omnet-ws/omnetpp-6.5.0' is ready.
++ run K4 cost-b1-first '--*.b1.ethg$o[0].link01.pathCost=3' '--**.link01.pathCost=1'
++ local config=K4 label=cost-b1-first
++ shift 2
++ local log_dir=/home/duongldm/omnet-ws/stp/out/review-k1-k7/cost-b1-first
++ mkdir -p /home/duongldm/omnet-ws/stp/out/review-k1-k7/cost-b1-first
++ ../src/stp_dbg -u Cmdenv -n .:../src -c K4 --cmdenv-express-mode=false --result-dir=/home/duongldm/omnet-ws/stp/out/review-k1-k7/cost-b1-first '--*.b1.ethg$o[0].link01.pathCost=3' '--**.link01.pathCost=1'
++ run K4 cost-b0-first '--*.b0.ethg$o[0].link01.pathCost=3' '--**.link01.pathCost=1'
++ local config=K4 label=cost-b0-first
++ shift 2
++ local log_dir=/home/duongldm/omnet-ws/stp/out/review-k1-k7/cost-b0-first
++ mkdir -p /home/duongldm/omnet-ws/stp/out/review-k1-k7/cost-b0-first
++ ../src/stp_dbg -u Cmdenv -n .:../src -c K4 --cmdenv-express-mode=false --result-dir=/home/duongldm/omnet-ws/stp/out/review-k1-k7/cost-b0-first '--*.b0.ethg$o[0].link01.pathCost=3' '--**.link01.pathCost=1'
++ run K1 restore-in-flight-probe '--**.link01.failAt=10.002s' '--**.link01.restoreAt=10.004s' '--**.probeInterval=0.1s' '--**.probeEnd=10s' --record-eventlog=true
++ local config=K1 label=restore-in-flight-probe
++ shift 2
++ local log_dir=/home/duongldm/omnet-ws/stp/out/review-k1-k7/restore-in-flight-probe
++ mkdir -p /home/duongldm/omnet-ws/stp/out/review-k1-k7/restore-in-flight-probe
++ ../src/stp_dbg -u Cmdenv -n .:../src -c K1 --cmdenv-express-mode=false --result-dir=/home/duongldm/omnet-ws/stp/out/review-k1-k7/restore-in-flight-probe '--**.link01.failAt=10.002s' '--**.link01.restoreAt=10.004s' '--**.probeInterval=0.1s' '--**.probeEnd=10s' --record-eventlog=true
++ run K7_STP phase-STP '--**.link04.restoreAt=12.5s'
++ local config=K7_STP label=phase-STP
++ shift 2
++ local log_dir=/home/duongldm/omnet-ws/stp/out/review-k1-k7/phase-STP
++ mkdir -p /home/duongldm/omnet-ws/stp/out/review-k1-k7/phase-STP
++ ../src/stp_dbg -u Cmdenv -n .:../src -c K7_STP --cmdenv-express-mode=false --result-dir=/home/duongldm/omnet-ws/stp/out/review-k1-k7/phase-STP '--**.link04.restoreAt=12.5s'
++ run K7_RSTP phase-RSTP '--**.link04.restoreAt=12.5s'
++ local config=K7_RSTP label=phase-RSTP
++ shift 2
++ local log_dir=/home/duongldm/omnet-ws/stp/out/review-k1-k7/phase-RSTP
++ mkdir -p /home/duongldm/omnet-ws/stp/out/review-k1-k7/phase-RSTP
++ ../src/stp_dbg -u Cmdenv -n .:../src -c K7_RSTP --cmdenv-express-mode=false --result-dir=/home/duongldm/omnet-ws/stp/out/review-k1-k7/phase-RSTP '--**.link04.restoreAt=12.5s'
