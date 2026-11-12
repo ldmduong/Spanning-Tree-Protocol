@@ -1,7 +1,0 @@
-cd src && make
-make[1]: Entering directory '/tmp/stp-review-k1-k7.uznra8Ip/src'
-MSGC: Bpdu.msg
-StpBridge.cc
-Bpdu_m.cc
-Creating executable: ../out/gcc-debug/src/stp_dbg
-make[1]: Leaving directory '/tmp/stp-review-k1-k7.uznra8Ip/src'
