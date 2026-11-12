@@ -1,0 +1,171 @@
+version 3
+run K3-0-20261111-14:03:49-18025
+attr configname K3
+attr datetime 20261111-14:03:49
+attr datetimef 20261111-140349
+attr experiment K3
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network stp.StpFive
+attr processid 18025
+attr repetition 0
+attr replication #0
+attr resultdir ../out/check-stp/in-flight
+attr runnumber 0
+attr seedset 0
+config **.link01.failAt 10.01s
+config cmdenv-express-mode false
+config result-dir ../out/check-stp/in-flight
+config extends K1
+config network stp.StpFive
+config sim-time-limit 25s
+
+par StpFive.b0.ethg$o[0].link01 typename "\"stp.StpLink\""
+par StpFive.b0.ethg$o[0].link01 disabled true
+attr mutable ""
+par StpFive.b0.ethg$o[0].link01 delay 0.01s
+attr mutable ""
+attr unit s
+par StpFive.b0.ethg$o[0].link01 pathCost 1
+par StpFive.b0.ethg$o[0].link01 failAt 10.01s
+attr unit s
+par StpFive.b1.ethg$o[0].link01 typename "\"stp.StpLink\""
+par StpFive.b1.ethg$o[0].link01 disabled true
+attr mutable ""
+par StpFive.b1.ethg$o[0].link01 delay 0.01s
+attr mutable ""
+attr unit s
+par StpFive.b1.ethg$o[0].link01 pathCost 1
+par StpFive.b1.ethg$o[0].link01 failAt 10.01s
+attr unit s
+par StpFive.b1.ethg$o[1].channel typename "\"stp.StpLink\""
+par StpFive.b1.ethg$o[1].channel disabled false
+attr mutable ""
+par StpFive.b1.ethg$o[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par StpFive.b1.ethg$o[1].channel pathCost 1
+par StpFive.b1.ethg$o[1].channel failAt -1s
+attr unit s
+par StpFive.b2.ethg$o[0].channel typename "\"stp.StpLink\""
+par StpFive.b2.ethg$o[0].channel disabled false
+attr mutable ""
+par StpFive.b2.ethg$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par StpFive.b2.ethg$o[0].channel pathCost 1
+par StpFive.b2.ethg$o[0].channel failAt -1s
+attr unit s
+par StpFive.b2.ethg$o[1].channel typename "\"stp.StpLink\""
+par StpFive.b2.ethg$o[1].channel disabled false
+attr mutable ""
+par StpFive.b2.ethg$o[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par StpFive.b2.ethg$o[1].channel pathCost 1
+par StpFive.b2.ethg$o[1].channel failAt -1s
+attr unit s
+par StpFive.b3.ethg$o[0].channel typename "\"stp.StpLink\""
+par StpFive.b3.ethg$o[0].channel disabled false
+attr mutable ""
+par StpFive.b3.ethg$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par StpFive.b3.ethg$o[0].channel pathCost 1
+par StpFive.b3.ethg$o[0].channel failAt -1s
+attr unit s
+par StpFive.b3.ethg$o[1].channel typename "\"stp.StpLink\""
+par StpFive.b3.ethg$o[1].channel disabled false
+attr mutable ""
+par StpFive.b3.ethg$o[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par StpFive.b3.ethg$o[1].channel pathCost 1
+par StpFive.b3.ethg$o[1].channel failAt -1s
+attr unit s
+par StpFive.b4.ethg$o[0].channel typename "\"stp.StpLink\""
+par StpFive.b4.ethg$o[0].channel disabled false
+attr mutable ""
+par StpFive.b4.ethg$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par StpFive.b4.ethg$o[0].channel pathCost 1
+par StpFive.b4.ethg$o[0].channel failAt -1s
+attr unit s
+par StpFive.b4.ethg$o[1].channel typename "\"stp.StpLink\""
+par StpFive.b4.ethg$o[1].channel disabled false
+attr mutable ""
+par StpFive.b4.ethg$o[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par StpFive.b4.ethg$o[1].channel pathCost 1
+par StpFive.b4.ethg$o[1].channel failAt -1s
+attr unit s
+par StpFive.b0.ethg$o[1].channel typename "\"stp.StpLink\""
+par StpFive.b0.ethg$o[1].channel disabled false
+attr mutable ""
+par StpFive.b0.ethg$o[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par StpFive.b0.ethg$o[1].channel pathCost 1
+par StpFive.b0.ethg$o[1].channel failAt -1s
+attr unit s
+par StpFive.b1.ethg$o[2].channel typename "\"stp.StpLink\""
+par StpFive.b1.ethg$o[2].channel disabled false
+attr mutable ""
+par StpFive.b1.ethg$o[2].channel delay 0.01s
+attr mutable ""
+attr unit s
+par StpFive.b1.ethg$o[2].channel pathCost 1
+par StpFive.b1.ethg$o[2].channel failAt -1s
+attr unit s
+par StpFive.b4.ethg$o[2].channel typename "\"stp.StpLink\""
+par StpFive.b4.ethg$o[2].channel disabled false
+attr mutable ""
+par StpFive.b4.ethg$o[2].channel delay 0.01s
+attr mutable ""
+attr unit s
+par StpFive.b4.ethg$o[2].channel pathCost 1
+par StpFive.b4.ethg$o[2].channel failAt -1s
+attr unit s
+par StpFive.b0 typename "\"stp.StpBridge\""
+par StpFive.b0 bridgeId 0
+par StpFive.b0 priority 32768
+par StpFive.b0 helloTime 2s
+attr unit s
+par StpFive.b0 maxAge 20s
+attr unit s
+par StpFive.b1 typename "\"stp.StpBridge\""
+par StpFive.b1 bridgeId 1
+par StpFive.b1 priority 32768
+par StpFive.b1 helloTime 2s
+attr unit s
+par StpFive.b1 maxAge 20s
+attr unit s
+par StpFive.b2 typename "\"stp.StpBridge\""
+par StpFive.b2 bridgeId 2
+par StpFive.b2 priority 32768
+par StpFive.b2 helloTime 2s
+attr unit s
+par StpFive.b2 maxAge 20s
+attr unit s
+par StpFive.b3 typename "\"stp.StpBridge\""
+par StpFive.b3 bridgeId 3
+par StpFive.b3 priority 32768
+par StpFive.b3 helloTime 2s
+attr unit s
+par StpFive.b3 maxAge 20s
+attr unit s
+par StpFive.b4 typename "\"stp.StpBridge\""
+par StpFive.b4 bridgeId 4
+par StpFive.b4 priority 32768
+par StpFive.b4 helloTime 2s
+attr unit s
+par StpFive.b4 maxAge 20s
+attr unit s
+par StpFive typename "\"stp.StpFive\""
+par StpFive diagonal true
+

@@ -1,0 +1,116 @@
+OMNeT++ Discrete Event Simulation  (C) 1992-2026 Andras Varga, OpenSim Ltd.
+Version: 6.5.0, build: 261029-ccd51e11a4, edition: Academic Public License -- NOT FOR COMMERCIAL USE
+See the license for distribution terms and warranty disclaimer
+
+Setting up Cmdenv...
+
+Loading NED files from .:  1
+Loading NED files from ../src:  2
+
+Preparing for running configuration General, run #0...
+Assigned runID=General-0-20261111-14:51:02-61945
+Setting up network "stp.StpNet"...
+Initializing...
+Initializing channel StpNet.b0.ethg$o[0].channel, stage 0
+Initializing channel StpNet.b1.ethg$o[0].channel, stage 0
+Initializing channel StpNet.b1.ethg$o[1].channel, stage 0
+Initializing channel StpNet.b2.ethg$o[0].channel, stage 0
+Initializing channel StpNet.b2.ethg$o[1].channel, stage 0
+Initializing channel StpNet.b0.ethg$o[1].channel, stage 0
+Initializing module StpNet, stage 0
+Initializing module StpNet.b0, stage 0
+[INFO]	STP_STATE t=0 bridge=b0 root=0 priority=32768 cost=0 rootPort=-1 port=0:b1:designated:forwarding port=1:b2:designated:forwarding
+Initializing module StpNet.b1, stage 0
+[INFO]	STP_STATE t=0 bridge=b1 root=1 priority=32768 cost=0 rootPort=-1 port=0:b0:designated:forwarding port=1:b2:designated:forwarding
+Initializing module StpNet.b2, stage 0
+[INFO]	STP_STATE t=0 bridge=b2 root=2 priority=32768 cost=0 rootPort=-1 port=0:b1:designated:forwarding port=1:b0:designated:forwarding
+
+Running simulation...
+** Event #1  t=0  on hello (omnetpp::cMessage)  in StpNet.b0 (StpBridge, id=2)    0% completed  (0% total)
+** Event #2  t=0  on hello (omnetpp::cMessage)  in StpNet.b1 (StpBridge, id=3)    0% completed  (0% total)
+** Event #3  t=0  on hello (omnetpp::cMessage)  in StpNet.b2 (StpBridge, id=4)    0% completed  (0% total)
+** Event #4  t=0.01  on BPDU (Bpdu)  in StpNet.b1 (StpBridge, id=3)    0% completed  (0% total)
+[DETAIL]	STP_BPDU t=0.01 bridge=b1 port=0 root=0 priority=32768 cost=0 sender=0 senderPriority=32768 senderPort=0 expires=20
+[INFO]	STP_STATE t=0.01 bridge=b1 root=0 priority=32768 cost=1 rootPort=0 port=0:b0:root:forwarding port=1:b2:designated:forwarding
+** Event #5  t=0.01  on BPDU (Bpdu)  in StpNet.b2 (StpBridge, id=4)    0% completed  (0% total)
+[DETAIL]	STP_BPDU t=0.01 bridge=b2 port=1 root=0 priority=32768 cost=0 sender=0 senderPriority=32768 senderPort=1 expires=20
+[INFO]	STP_STATE t=0.01 bridge=b2 root=0 priority=32768 cost=1 rootPort=1 port=0:b1:designated:forwarding port=1:b0:root:forwarding
+** Event #6  t=0.01  on BPDU (Bpdu)  in StpNet.b0 (StpBridge, id=2)    0% completed  (0% total)
+[DETAIL]	STP_BPDU t=0.01 bridge=b0 port=0 root=1 priority=32768 cost=0 sender=1 senderPriority=32768 senderPort=0 expires=20
+** Event #7  t=0.01  on BPDU (Bpdu)  in StpNet.b2 (StpBridge, id=4)    0% completed  (0% total)
+[DETAIL]	STP_BPDU t=0.01 bridge=b2 port=0 root=1 priority=32768 cost=0 sender=1 senderPriority=32768 senderPort=1 expires=20
+** Event #8  t=0.01  on BPDU (Bpdu)  in StpNet.b1 (StpBridge, id=3)    0% completed  (0% total)
+[DETAIL]	STP_BPDU t=0.01 bridge=b1 port=1 root=2 priority=32768 cost=0 sender=2 senderPriority=32768 senderPort=0 expires=20
+** Event #9  t=0.01  on BPDU (Bpdu)  in StpNet.b0 (StpBridge, id=2)    0% completed  (0% total)
+[DETAIL]	STP_BPDU t=0.01 bridge=b0 port=1 root=2 priority=32768 cost=0 sender=2 senderPriority=32768 senderPort=1 expires=20
+** Event #10  t=2  on hello (omnetpp::cMessage)  in StpNet.b0 (StpBridge, id=2)    20% completed  (19% total)
+** Event #11  t=2  on hello (omnetpp::cMessage)  in StpNet.b1 (StpBridge, id=3)    20% completed  (19% total)
+** Event #12  t=2  on hello (omnetpp::cMessage)  in StpNet.b2 (StpBridge, id=4)    20% completed  (19% total)
+** Event #13  t=2.01  on BPDU (Bpdu)  in StpNet.b1 (StpBridge, id=3)    20% completed  (20% total)
+[DETAIL]	STP_BPDU t=2.01 bridge=b1 port=0 root=0 priority=32768 cost=0 sender=0 senderPriority=32768 senderPort=0 expires=22
+** Event #14  t=2.01  on BPDU (Bpdu)  in StpNet.b2 (StpBridge, id=4)    20% completed  (20% total)
+[DETAIL]	STP_BPDU t=2.01 bridge=b2 port=1 root=0 priority=32768 cost=0 sender=0 senderPriority=32768 senderPort=1 expires=22
+** Event #15  t=2.01  on BPDU (Bpdu)  in StpNet.b0 (StpBridge, id=2)    20% completed  (20% total)
+[DETAIL]	STP_BPDU t=2.01 bridge=b0 port=0 root=0 priority=32768 cost=1 sender=1 senderPriority=32768 senderPort=0 expires=20
+** Event #16  t=2.01  on BPDU (Bpdu)  in StpNet.b2 (StpBridge, id=4)    20% completed  (20% total)
+[DETAIL]	STP_BPDU t=2.01 bridge=b2 port=0 root=0 priority=32768 cost=1 sender=1 senderPriority=32768 senderPort=1 expires=20
+[INFO]	STP_STATE t=2.01 bridge=b2 root=0 priority=32768 cost=1 rootPort=1 port=0:b1:alternate:blocking port=1:b0:root:forwarding
+** Event #17  t=2.01  on BPDU (Bpdu)  in StpNet.b1 (StpBridge, id=3)    20% completed  (20% total)
+[DETAIL]	STP_BPDU t=2.01 bridge=b1 port=1 root=0 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=0 expires=20
+** Event #18  t=2.01  on BPDU (Bpdu)  in StpNet.b0 (StpBridge, id=2)    20% completed  (20% total)
+[DETAIL]	STP_BPDU t=2.01 bridge=b0 port=1 root=0 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=1 expires=20
+** Event #19  t=4  on hello (omnetpp::cMessage)  in StpNet.b0 (StpBridge, id=2)    40% completed  (39% total)
+** Event #20  t=4  on hello (omnetpp::cMessage)  in StpNet.b1 (StpBridge, id=3)    40% completed  (39% total)
+** Event #21  t=4  on hello (omnetpp::cMessage)  in StpNet.b2 (StpBridge, id=4)    40% completed  (39% total)
+** Event #22  t=4.01  on BPDU (Bpdu)  in StpNet.b1 (StpBridge, id=3)    40% completed  (40% total)
+[DETAIL]	STP_BPDU t=4.01 bridge=b1 port=0 root=0 priority=32768 cost=0 sender=0 senderPriority=32768 senderPort=0 expires=24
+** Event #23  t=4.01  on BPDU (Bpdu)  in StpNet.b2 (StpBridge, id=4)    40% completed  (40% total)
+[DETAIL]	STP_BPDU t=4.01 bridge=b2 port=1 root=0 priority=32768 cost=0 sender=0 senderPriority=32768 senderPort=1 expires=24
+** Event #24  t=4.01  on BPDU (Bpdu)  in StpNet.b0 (StpBridge, id=2)    40% completed  (40% total)
+[DETAIL]	STP_BPDU t=4.01 bridge=b0 port=0 root=0 priority=32768 cost=1 sender=1 senderPriority=32768 senderPort=0 expires=22
+** Event #25  t=4.01  on BPDU (Bpdu)  in StpNet.b2 (StpBridge, id=4)    40% completed  (40% total)
+[DETAIL]	STP_BPDU t=4.01 bridge=b2 port=0 root=0 priority=32768 cost=1 sender=1 senderPriority=32768 senderPort=1 expires=22
+** Event #26  t=4.01  on BPDU (Bpdu)  in StpNet.b1 (StpBridge, id=3)    40% completed  (40% total)
+[DETAIL]	STP_BPDU t=4.01 bridge=b1 port=1 root=0 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=0 expires=22
+** Event #27  t=4.01  on BPDU (Bpdu)  in StpNet.b0 (StpBridge, id=2)    40% completed  (40% total)
+[DETAIL]	STP_BPDU t=4.01 bridge=b0 port=1 root=0 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=1 expires=22
+** Event #28  t=6  on hello (omnetpp::cMessage)  in StpNet.b0 (StpBridge, id=2)    60% completed  (60% total)
+** Event #29  t=6  on hello (omnetpp::cMessage)  in StpNet.b1 (StpBridge, id=3)    60% completed  (60% total)
+** Event #30  t=6  on hello (omnetpp::cMessage)  in StpNet.b2 (StpBridge, id=4)    60% completed  (60% total)
+** Event #31  t=6.01  on BPDU (Bpdu)  in StpNet.b1 (StpBridge, id=3)    60% completed  (60% total)
+[DETAIL]	STP_BPDU t=6.01 bridge=b1 port=0 root=0 priority=32768 cost=0 sender=0 senderPriority=32768 senderPort=0 expires=26
+** Event #32  t=6.01  on BPDU (Bpdu)  in StpNet.b2 (StpBridge, id=4)    60% completed  (60% total)
+[DETAIL]	STP_BPDU t=6.01 bridge=b2 port=1 root=0 priority=32768 cost=0 sender=0 senderPriority=32768 senderPort=1 expires=26
+** Event #33  t=6.01  on BPDU (Bpdu)  in StpNet.b0 (StpBridge, id=2)    60% completed  (60% total)
+[DETAIL]	STP_BPDU t=6.01 bridge=b0 port=0 root=0 priority=32768 cost=1 sender=1 senderPriority=32768 senderPort=0 expires=24
+** Event #34  t=6.01  on BPDU (Bpdu)  in StpNet.b2 (StpBridge, id=4)    60% completed  (60% total)
+[DETAIL]	STP_BPDU t=6.01 bridge=b2 port=0 root=0 priority=32768 cost=1 sender=1 senderPriority=32768 senderPort=1 expires=24
+** Event #35  t=6.01  on BPDU (Bpdu)  in StpNet.b1 (StpBridge, id=3)    60% completed  (60% total)
+[DETAIL]	STP_BPDU t=6.01 bridge=b1 port=1 root=0 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=0 expires=24
+** Event #36  t=6.01  on BPDU (Bpdu)  in StpNet.b0 (StpBridge, id=2)    60% completed  (60% total)
+[DETAIL]	STP_BPDU t=6.01 bridge=b0 port=1 root=0 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=1 expires=24
+** Event #37  t=8  on hello (omnetpp::cMessage)  in StpNet.b0 (StpBridge, id=2)    80% completed  (80% total)
+** Event #38  t=8  on hello (omnetpp::cMessage)  in StpNet.b1 (StpBridge, id=3)    80% completed  (80% total)
+** Event #39  t=8  on hello (omnetpp::cMessage)  in StpNet.b2 (StpBridge, id=4)    80% completed  (80% total)
+** Event #40  t=8.01  on BPDU (Bpdu)  in StpNet.b1 (StpBridge, id=3)    80% completed  (80% total)
+[DETAIL]	STP_BPDU t=8.01 bridge=b1 port=0 root=0 priority=32768 cost=0 sender=0 senderPriority=32768 senderPort=0 expires=28
+** Event #41  t=8.01  on BPDU (Bpdu)  in StpNet.b2 (StpBridge, id=4)    80% completed  (80% total)
+[DETAIL]	STP_BPDU t=8.01 bridge=b2 port=1 root=0 priority=32768 cost=0 sender=0 senderPriority=32768 senderPort=1 expires=28
+** Event #42  t=8.01  on BPDU (Bpdu)  in StpNet.b0 (StpBridge, id=2)    80% completed  (80% total)
+[DETAIL]	STP_BPDU t=8.01 bridge=b0 port=0 root=0 priority=32768 cost=1 sender=1 senderPriority=32768 senderPort=0 expires=26
+** Event #43  t=8.01  on BPDU (Bpdu)  in StpNet.b2 (StpBridge, id=4)    80% completed  (80% total)
+[DETAIL]	STP_BPDU t=8.01 bridge=b2 port=0 root=0 priority=32768 cost=1 sender=1 senderPriority=32768 senderPort=1 expires=26
+** Event #44  t=8.01  on BPDU (Bpdu)  in StpNet.b1 (StpBridge, id=3)    80% completed  (80% total)
+[DETAIL]	STP_BPDU t=8.01 bridge=b1 port=1 root=0 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=0 expires=26
+** Event #45  t=8.01  on BPDU (Bpdu)  in StpNet.b0 (StpBridge, id=2)    80% completed  (80% total)
+[DETAIL]	STP_BPDU t=8.01 bridge=b0 port=1 root=0 priority=32768 cost=1 sender=2 senderPriority=32768 senderPort=1 expires=26
+** Event #46  t=10  on hello (omnetpp::cMessage)  in StpNet.b0 (StpBridge, id=2)    100% completed  (100% total)
+** Event #47  t=10  on hello (omnetpp::cMessage)  in StpNet.b1 (StpBridge, id=3)    100% completed  (100% total)
+** Event #48  t=10  on hello (omnetpp::cMessage)  in StpNet.b2 (StpBridge, id=4)    100% completed  (100% total)
+** Event #49  t=10  on endsimulation (omnetpp::cEndSimulationEvent)    100% completed  (100% total)
+
+<!> Simulation time limit reached -- at t=10s, event #49
+
+Calling finish() at end of Run #0...
+
+End.

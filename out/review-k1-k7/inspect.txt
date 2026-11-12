@@ -1,0 +1,117 @@
+K1 initial last 4.01 tree [(0, 1), (0, 4), (1, 2), (3, 4)]
+probe-K1 total 3000 / 3000 copies dropped {'blocked': 3450}
+  before [8,23) 3000/3000
+  missing by send time: {}
+  received src=0 dst=3 seq=2 b0@8 b4@8.01 b3@8.02
+  received src=0 dst=3 seq=162 b0@12 b4@12.01 b3@12.02
+  received src=0 dst=3 seq=402 b0@18 b4@18.01 b3@18.02
+  received src=0 dst=1 seq=0 b0@8 b1@8.01
+  received src=0 dst=1 seq=400 b0@18 b1@18.01
+K2 initial last 4.01 tree [(0, 4), (1, 2), (2, 3), (3, 4)]
+probe-K2 total 3000 / 3000 copies dropped {'blocked': 3450}
+  before [8,23) 3000/3000
+  missing by send time: {}
+  received src=0 dst=3 seq=2 b0@8 b4@8.01 b3@8.02
+  received src=0 dst=3 seq=162 b0@12 b4@12.01 b3@12.02
+  received src=0 dst=3 seq=402 b0@18 b4@18.01 b3@18.02
+  received src=0 dst=1 seq=0 b0@8 b4@8.01 b3@8.02 b2@8.03 b1@8.04
+  received src=0 dst=1 seq=400 b0@18 b4@18.01 b3@18.02 b2@18.03 b1@18.04
+K3 initial last 4.01 tree [(0, 1), (0, 4), (1, 2), (3, 4)]
+K3 post-event last 14.01 tree [(0, 4), (1, 2), (1, 4), (3, 4)]
+probe-K3 total 2818 / 3000 copies dropped {'blocked': 1865}
+  before [8,10.5) 500/500
+  event round [10.5,10.6) 8/20
+  remaining transition [10.6,14.01) 530/700
+  after [14.01,23) 1780/1780
+  missing by send time: {Decimal('10.5'): 12, Decimal('10.6'): 12, Decimal('10.7'): 12, Decimal('10.8'): 12, Decimal('10.9'): 12, Decimal('11'): 12, Decimal('11.1'): 12, Decimal('11.2'): 12, Decimal('11.3'): 12, Decimal('11.4'): 12, Decimal('11.5'): 12, Decimal('11.6'): 12, Decimal('11.7'): 12, Decimal('11.8'): 12, Decimal('11.9'): 12, Decimal('12'): 2}
+  missing src=0 dst=1 seq=100
+  missing src=0 dst=2 seq=101
+  missing src=1 dst=0 seq=100
+    blocked b1@10.5 b4@10.51
+    blocked b1@10.5 b2@10.51 b3@10.52
+  received src=0 dst=3 seq=2 b0@8 b4@8.01 b3@8.02
+  received src=0 dst=3 seq=162 b0@12 b4@12.01 b3@12.02
+  received src=0 dst=3 seq=402 b0@18 b4@18.01 b3@18.02
+  received src=0 dst=1 seq=0 b0@8 b1@8.01
+  received src=0 dst=1 seq=400 b0@18 b4@18.01 b1@18.02
+K4 initial last 4.01 tree [(0, 4), (1, 2), (1, 4), (3, 4)]
+probe-K4 total 3000 / 3000 copies dropped {'blocked': 3600}
+  before [8,23) 3000/3000
+  missing by send time: {}
+  received src=0 dst=3 seq=2 b0@8 b4@8.01 b3@8.02
+  received src=0 dst=3 seq=162 b0@12 b4@12.01 b3@12.02
+  received src=0 dst=3 seq=402 b0@18 b4@18.01 b3@18.02
+  received src=0 dst=1 seq=0 b0@8 b4@8.01 b1@8.02
+  received src=0 dst=1 seq=400 b0@18 b4@18.01 b1@18.02
+K5 initial last 4.01 tree [(0, 1), (0, 4), (1, 2), (3, 4)]
+probe-K5 total 3000 / 3000 copies dropped {'blocked': 1500}
+  before [8,23) 3000/3000
+  missing by send time: {}
+  received src=0 dst=3 seq=2 b0@8 b4@8.01 b3@8.02
+  received src=0 dst=3 seq=162 b0@12 b4@12.01 b3@12.02
+  received src=0 dst=3 seq=402 b0@18 b4@18.01 b3@18.02
+  received src=0 dst=1 seq=0 b0@8 b1@8.01
+  received src=0 dst=1 seq=400 b0@18 b1@18.01
+K6 initial last 4.01 tree [(0, 1), (0, 4), (1, 2), (3, 4), (4, 5), (4, 7), (5, 6)]
+probe-K6 total 8400 / 8400 copies dropped {'blocked': 16650}
+  before [8,23) 8400/8400
+  missing by send time: {}
+  received src=0 dst=3 seq=2 b0@8 b4@8.01 b3@8.02
+  received src=0 dst=3 seq=282 b0@12 b4@12.01 b3@12.02
+  received src=0 dst=3 seq=702 b0@18 b4@18.01 b3@18.02
+  received src=0 dst=1 seq=0 b0@8 b1@8.01
+  received src=0 dst=1 seq=700 b0@18 b1@18.01
+K7_STP initial last 4.01 tree [(0, 1), (1, 2), (1, 4), (2, 3)]
+K7_STP post-event last 14.01 tree [(0, 1), (0, 4), (1, 2), (3, 4)]
+K7_STP total 2999 / 3000 copies dropped {'blocked': 3026, 'duplicate': 2}
+  before [8,12) 800/800
+  event round [12,12.1) 19/20
+  remaining transition [12.1,14.01) 400/400
+  after [14.01,23) 1780/1780
+  missing by send time: {Decimal('12'): 1}
+  missing src=0 dst=4 seq=163
+    blocked b0@12 b1@12.01 b4@12.02
+  received src=0 dst=3 seq=2 b0@8 b1@8.01 b2@8.02 b3@8.03
+  received src=0 dst=3 seq=162 b0@12 b1@12.01 b2@12.02 b3@12.03
+  received src=0 dst=3 seq=402 b0@18 b4@18.01 b3@18.02
+  received src=0 dst=1 seq=0 b0@8 b1@8.01
+  received src=0 dst=1 seq=400 b0@18 b1@18.01
+  duplicate src=4 dst=2 seq=162 b4@12 b1@12.01 b0@12.02 b4@12.03
+  duplicate src=4 dst=3 seq=163 b4@12 b1@12.01 b0@12.02 b4@12.03
+K7_RSTP initial last 0.03 tree [(0, 1), (1, 2), (1, 4), (2, 3)]
+K7_RSTP post-event last 12.02 tree [(0, 1), (0, 4), (1, 2), (3, 4)]
+K7_RSTP total 2997 / 3000 copies dropped {'blocked': 3010, 'duplicate': 3}
+  before [8,12) 800/800
+  event round [12,12.1) 17/20
+  after [12.1,23) 2180/2180
+  missing by send time: {Decimal('12'): 3}
+  missing src=0 dst=3 seq=162
+    blocked b0@12 b1@12.01 b4@12.02
+    blocked b0@12 b1@12.01 b2@12.02 b3@12.03
+  missing src=0 dst=4 seq=163
+    blocked b0@12 b1@12.01 b4@12.02
+    blocked b0@12 b1@12.01 b2@12.02 b3@12.03
+  missing src=4 dst=3 seq=163
+    blocked b4@12 b3@12.01
+    duplicate b4@12 b1@12.01 b0@12.02 b4@12.03
+    blocked b4@12 b1@12.01 b2@12.02 b3@12.03
+  received src=0 dst=3 seq=2 b0@8 b1@8.01 b2@8.02 b3@8.03
+  received src=0 dst=3 seq=402 b0@18 b4@18.01 b3@18.02
+  received src=0 dst=1 seq=0 b0@8 b1@8.01
+  received src=0 dst=1 seq=400 b0@18 b1@18.01
+  duplicate src=4 dst=2 seq=162 b4@12 b1@12.01 b0@12.02 b4@12.03
+  duplicate src=4 dst=3 seq=163 b4@12 b1@12.01 b0@12.02 b4@12.03
+  duplicate src=2 dst=3 seq=162 b2@12 b1@12.01 b0@12.02 b4@12.03 b3@12.04
+restore-in-flight-probe total 400 / 400 copies dropped {'blocked': 240, 'duplicate': 520}
+  before [8,10) 400/400
+  missing by send time: {}
+  received src=0 dst=3 seq=2 b0@8 b4@8.01 b3@8.02
+  received src=0 dst=1 seq=0 b0@8 b1@8.01
+  duplicate src=0 dst=1 seq=0 b0@8 b4@8.01 b1@8.02
+  duplicate src=0 dst=2 seq=1 b0@8 b1@8.01 b4@8.02
+  duplicate src=0 dst=2 seq=1 b0@8 b4@8.01 b1@8.02
+  duplicate src=0 dst=3 seq=2 b0@8 b1@8.01 b4@8.02
+  duplicate src=0 dst=3 seq=2 b0@8 b4@8.01 b1@8.02
+  duplicate src=0 dst=4 seq=3 b0@8 b1@8.01 b4@8.02
+  duplicate src=1 dst=0 seq=0 b1@8 b4@8.01 b0@8.02
+  duplicate src=1 dst=2 seq=1 b1@8 b0@8.01 b4@8.02
