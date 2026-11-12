@@ -1,4 +1,0 @@
-Restore regression passed: K1 tree before failure, 400/400 probes, no duplicates, two stale BPDUs discarded after restore.
-Failure boundary passed: two BPDUs in flight discarded at the same time as link down.
-K1–K6 generated all expected probes without command-line overrides.
-General smoke test passed.
