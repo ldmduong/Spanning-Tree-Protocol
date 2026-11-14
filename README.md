@@ -77,6 +77,8 @@ opp_env run omnetpp-6.5.0 -c 'cd simulations && ../src/stp_dbg -u Qtenv -n .:../
 opp_env run omnetpp-6.5.0 -c 'cd simulations && ../src/stp_dbg -u Qtenv -n .:../src -c K7_RSTP -r 0'
 ```
 
+Nhãn `Path cost` trên switch ghi tổng cost về root. Dây có cost khác mặc định hiển thị `Link cost`, ví dụ dây `b0–b1` ghi `Link cost 3` ở K4. Các dây còn lại trong K4 có cost 1.
+
 #### Khi chưa thấy cửa sổ Qtenv trên WSL
 
 Nếu terminal dừng ở `Setting up Qtenv...` hoặc `Loading images...`, dùng **Alt+Tab** để tìm cửa sổ OMNeT++. Nếu vẫn chưa thấy, dừng lệnh hiện tại bằng **Ctrl+C** rồi thử mở K1 qua X11 của WSLg.

@@ -159,6 +159,20 @@ STP_STATE t=12.02 bridge=b3 root=0 priority=32768 cost=2 rootPort=1 port=0:b2:al
 
 **Đối chứng pha hello.** Chạy bổ sung cả hai chế độ với `restoreAt=12.5s`. STP mở cả hai đầu lúc 14,01 s và đổi lần cuối lúc 16,01 s, tức 3,51 s sau khôi phục. Rapid kích hoạt BPDU tại 12,5 s, mở cả hai đầu lúc 12,51 s và đổi lần cuối lúc 12,52 s, tức 0,02 s. Việc hai đường trực tiếp cùng bắt đầu forwarding ở 12,01 s trong cấu hình chính đến từ mốc mở trùng hello. [Đối chứng STP](out/review-k1-k7/phase-STP/cmdenv.log#L8246) · [Đối chứng RSTP](out/review-k1-k7/phase-RSTP/cmdenv.log#L6256)
 
+### Kiểm tra nhãn cổng trên Qtenv khi khôi phục K7
+
+Trước khi sửa, Qtenv dùng nhãn `BLOCKING` cho cả cổng `alternate` và cổng vừa khôi phục còn chờ BPDU. Hàm `refreshDisplay()` giờ hiển thị `WAITING BPDU` khi cổng có `awaitingBpdu=true`. Các cổng đang chặn do vai trò `alternate` tiếp tục hiển thị `BLOCKING`. [Mã hiển thị](src/StpBridge.cc#L216)
+
+| Mốc kiểm tra | Hiển thị trên cả K7-STP và K7-RSTP |
+| --- | --- |
+| Trước 12 s | Dây b0–b4 đỏ đứt vì đang down. Cổng b3 hướng b4 mang nhãn `BLOCKING p1 -> b4`. |
+| Sau các sự kiện ở 12 s, trước khi BPDU tới ở 12,01 s | Dây b0–b4 cam đứt. b0 hiện `WAITING BPDU p1 -> b4` và b4 hiện `WAITING BPDU p1 -> b0`. Nhãn `BLOCKING p1 -> b4` vẫn nằm trên b3. |
+| Từ 12,01 s, sau khi hai đầu nhận BPDU | Hai nhãn `WAITING BPDU` biến mất và dây b0–b4 xanh liền. Cổng b4 hướng b1 hiện `BLOCKING p2 -> b1`. |
+
+Đã đối chiếu 15 mốc Qtenv với trace STP, gồm lúc mở dây ở cả hai lượt K7. Cả tám lượt Cmdenv đạt kiểm tra hồi quy và cho cùng số liệu hội tụ, probe như trước khi đổi nhãn. Để quan sát khoảng chờ ngắn khi demo, dùng **Step** quanh mốc 12 s. Phép kiểm tra đồ họa dùng Qtenv kết xuất ngoài màn hình.
+
+Bằng chứng của lượt kiểm tra nằm trong thư mục log cục bộ `out/review-visual/`. [Ảnh K7-STP lúc chờ BPDU](out/review-visual/qtenv-waiting/K7-STP-open-view0.png) · [Ảnh K7-RSTP lúc chờ BPDU](out/review-visual/qtenv-waiting/K7-RSTP-open-view0.png) · [Kết quả Qtenv](out/review-visual/qtenv-waiting/summary.txt) · [Hồi quy Cmdenv](out/review-visual/cmdenv-waiting/summary.txt)
+
 ### Probe K7
 
 | Thời điểm phát | K7-STP nhận / phát | K7-RSTP nhận / phát |
@@ -222,4 +236,4 @@ bash out/review-k1-k7/check-tools.sh > out/review-k1-k7/check-tools.log 2>&1
 | Tái hiện | `out/review-k1-k7/{in-flight,restore-in-flight,restore-in-flight-probe,expiry,isolate-root,cost-b0-out,cost-b1-out,phase-STP,phase-RSTP}/cmdenv.log` |
 | Lệnh và kết quả kiểm tra | [toolchain.log](out/review-k1-k7/toolchain.log), [extra.log](out/review-k1-k7/extra.log), [cost.log](out/review-k1-k7/cost.log), [summary.txt](out/review-k1-k7/summary.txt), [inspect.txt](out/review-k1-k7/inspect.txt), [check-tools.log](out/review-k1-k7/check-tools.log) |
 
-Tất cả cấu hình chính kết thúc theo giới hạn mô phỏng 25 s. Các lượt chẩn đoán có override được ghi riêng theo tên lượt. Mã nguồn, cấu hình và tài liệu hiện có giữ nguyên.
+Tất cả cấu hình chính trong lượt review ban đầu kết thúc theo giới hạn mô phỏng 25 s. Các lượt chẩn đoán có override được ghi riêng theo tên lượt.

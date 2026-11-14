@@ -63,6 +63,7 @@ class StpBridge : public cSimpleModule {
   protected:
     void initialize() override;
     void handleMessage(cMessage *msg) override;
+    void refreshDisplay() const override;
 
   public:
     ~StpBridge() override;
@@ -210,6 +211,37 @@ void StpBridge::recompute() {
         rescheduleAt(*nextChange, portTimer);
     else
         cancelEvent(portTimer);
+}
+
+void StpBridge::refreshDisplay() const {
+    auto label = root == self ? std::string("ROOT") :
+                 "Root b" + std::to_string(root.second) + " | Path cost " + std::to_string(rootCost);
+
+    for (int i = 0; i < gateSize("ethg"); ++i) {
+        const auto *peerGate = gate("ethg$o", i)->getNextGate();
+        const auto *peer = check_and_cast<const StpBridge *>(peerGate->getOwnerModule());
+        const auto& localPort = ports[i];
+        const auto& peerPort = peer->ports[peerGate->getIndex()];
+        if (localPort.role != Role::Down && !localPort.forwarding()) {
+            label += localPort.awaitingBpdu ? "\nWAITING BPDU p" : "\nBLOCKING p";
+            label += std::to_string(i) + " -> " + peer->getName();
+        }
+
+        const bool down = localPort.role == Role::Down || peerPort.role == Role::Down;
+        const bool forwarding = localPort.forwarding() && peerPort.forwarding();
+        auto& display = localPort.channel->getDisplayString();
+        display.setTagArg("ls", 0, down ? "#be123c" : forwarding ? "#15803d" : "#b45309");
+        display.setTagArg("ls", 1, forwarding ? "4" : "2");
+        display.setTagArg("ls", 2, forwarding ? "solid" : "dashed");
+        const bool sameCost = localPort.cost == peerPort.cost;
+        if (localPort.cost != 1 && (!sameCost || self < peer->self)) {
+            auto costLabel = "Link cost " + std::to_string(localPort.cost);
+            if (!sameCost)
+                costLabel += " (" + std::string(getName()) + " -> " + peer->getName() + ")";
+            display.setTagArg("t", 0, costLabel.c_str());
+        }
+    }
+    getDisplayString().setTagArg("t", 0, label.c_str());
 }
 
 void StpBridge::logState() const {
